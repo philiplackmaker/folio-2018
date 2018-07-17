@@ -29,9 +29,6 @@ export default () => (
           <ListItems>
             <Link to ="/">Home</Link>
           </ListItems>
-          <ListItems>
-            <Link to ="/About">About</Link>
-          </ListItems>
         </List>
 </Navigation>
 );

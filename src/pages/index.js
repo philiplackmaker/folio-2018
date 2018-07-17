@@ -30,9 +30,9 @@ export default () => (
        <Navigation>
         </Navigation>
   <Container>
-    <h1>
+    <h2>
       <Link to="/audio">Cambridge Audio</Link>
-    </h1>
+    </h2>
   </Container>
   </Page>
 );
