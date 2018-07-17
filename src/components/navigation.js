@@ -10,5 +10,17 @@ const Navigation = styled.div`
     margin: 0 auto;
     display: flex;
 `;
-export default Navigation
 
+
+export default () => (
+ <Navigation>
+        <ul>
+          <li>
+            <Link to ="/">Home</Link>
+          </li>
+          <li>
+            <Link to ="/cambridgeaudio">Cambridge Audio</Link>
+          </li>
+        </ul>
+</Navigation>
+);
