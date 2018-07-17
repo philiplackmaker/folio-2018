@@ -12,16 +12,26 @@ const Navigation = styled.div`
     display: flex;
 `;
 
+const ListItems = styled.li`
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+`;
+
+const List = styled.ul`
+    list-style-type: none;
+
+`;
 
 export default () => (
  <Navigation>
-        <ul>
-          <li>
+        <List>
+          <ListItems>
             <Link to ="/">Home</Link>
-          </li>
-          <li>
+          </ListItems>
+          <ListItems>
             <Link to ="/About">About</Link>
-          </li>
-        </ul>
+          </ListItems>
+        </List>
 </Navigation>
 );

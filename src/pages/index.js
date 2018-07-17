@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link"
 import styled from "styled-components";
 import './global.css'
 
@@ -30,9 +31,8 @@ export default () => (
         </Navigation>
   <Container>
     <h1>
-      <Link to="/">Cambridge Audio</Link>
+      <Link to="/audio">Cambridge Audio</Link>
     </h1>
-    <p>Philip</p>
   </Container>
   </Page>
 );

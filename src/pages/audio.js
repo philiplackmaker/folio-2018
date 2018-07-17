@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link"
 import styled from "styled-components";
 
 import Navigation from '../components/navigation'
@@ -27,7 +28,7 @@ export default () => (
        <Navigation>
         </Navigation>
   <Container>
-  <h1>Cam
+  <h1>Cambridge Audio
   </h1>
   </Container>
   </Page>
