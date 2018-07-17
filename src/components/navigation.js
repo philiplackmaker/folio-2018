@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
+import '/Users/philip/development/folio-2018/src/pages/global.css';
 
 
 const Navigation = styled.div`
@@ -19,7 +20,7 @@ export default () => (
             <Link to ="/">Home</Link>
           </li>
           <li>
-            <Link to ="/cambridgeaudio">Cambridge Audio</Link>
+            <Link to ="/About">About</Link>
           </li>
         </ul>
 </Navigation>

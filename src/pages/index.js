@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import './global.css'
+
 
 import Navigation from '../components/navigation'
 
@@ -27,7 +29,9 @@ export default () => (
        <Navigation>
         </Navigation>
   <Container>
-    <h1>Hello</h1>
+    <h1>
+      <Link to="/">Cambridge Audio</Link>
+    </h1>
     <p>Philip</p>
   </Container>
   </Page>
