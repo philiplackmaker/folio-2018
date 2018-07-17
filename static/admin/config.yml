@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: philiplackmaker/folio-2018
 
 media_folder: static/assets
 public_folder: assets
