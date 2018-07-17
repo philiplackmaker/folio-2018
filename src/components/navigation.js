@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
-import '/Users/philip/development/folio-2018/src/pages/global.css';
 
 
 const Navigation = styled.div`
