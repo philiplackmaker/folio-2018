@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "gatsby-link"
+import Link from "gatsby-link";
 import styled from "styled-components";
 
-import Navigation from '../components/navigation'
-import './global.css'
+import Navigation from '../components/navigation';
+import './global.css';
 
 
 const Page = styled.div`

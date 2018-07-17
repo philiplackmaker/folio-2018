@@ -14,4 +14,14 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }git 
+      - { name: body, label: Body, widget: markdown }
+
+
+  - name: projects
+    label: Projects
+    folder: projects
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }      
