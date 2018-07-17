@@ -2,6 +2,6 @@ module.exports = {
     plugins: [`gatsby-plugin-netlify-cms`],
   };
 
-  module.exports = {
+module.exports = {
     plugins: [`gatsby-plugin-styled-components`],
   };
