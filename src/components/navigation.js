@@ -10,26 +10,34 @@ const Navigation = styled.div`
     display: flex;
 `;
 
-const ListItems = styled.li`
-    display: block;
-    font-size: 30px;
-`;
+
 
 const List = styled.ul`
     list-style-type: none;
+    padding: 0;
+    margin: 0; 
+`;
+
+const ListItems = styled.li`
     font-family: 'Sailec-Regular';
     text-decoration: none;
+    display: block;
+    font-size: 30px;
+    padding: 14px 16px;
+    float: left;
 `;
+
+
 
 export default () => (
  <Navigation>
-        <List>
-          <ListItems>
+    <List>
+        <ListItems>
             <Link to ="/">Home</Link>
+        </ListItems>
+        <ListItems>
             <Link to ="/">About</Link>
-            <Link to ="/">Thinking</Link>
-            <Link to ="/">Blog</Link>
-          </ListItems>
-        </List>
+        </ListItems>
+    </List>
 </Navigation>
 );
