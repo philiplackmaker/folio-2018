@@ -20,20 +20,33 @@ const List = styled.ul`
 
 const ListItems = styled.li`
     font-family: 'Sailec-Regular';
-    text-decoration: none;
     display: block;
     font-size: 30px;
     padding: 14px 16px;
     float: left;
+
 `;
 
+const NavigationLink = styled(Link)`
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+    :visited, :active{
+        color: red;
+        text-underline: none;
+    }
+    &:hover{
+        color: black;
+        text-underline: none;
+    }
+
+`;
 
 
 export default () => (
  <Navigation>
     <List>
         <ListItems>
-            <Link to ="/">Home</Link>
+            <NavigationLink to ="/">Home</NavigationLink>
         </ListItems>
         <ListItems>
             <Link to ="/">About</Link>
