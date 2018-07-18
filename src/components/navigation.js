@@ -16,6 +16,7 @@ const List = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0; 
+
 `;
 
 const ListItems = styled.li`

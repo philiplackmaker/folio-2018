@@ -15,21 +15,27 @@ const Page = styled.div`
 
 
 const Container = styled.div`
-  margin: 3rem auto;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(10, 10% [col-start]);
+  grid-template-rows: 25% 100px auto;
 `;
 
+const ProjectHeader = styled.div`
+grid-column-start: 1;
+grid-column-end: 11;
+
+`;
 
 export default () => (
    <Page>
        <Navigation>
         </Navigation>
   <Container>
-  <h1>Cambridge Audio</h1>
+    <ProjectHeader>
+  <h2>Cambridge Audio</h2>
+  </ProjectHeader>
   </Container>
   </Page>
 );

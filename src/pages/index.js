@@ -30,9 +30,20 @@ const Header = styled.div`
   margin: 0;
 `;
 
-const ProjecctCard = styled.div`
+const ProjecctCard = styled(Link)`
 grid-column-start: 1;
-grid-row-start: 2;
+grid-column-end: 4;
+background-color: red;
+transition: all 0.4s ease-in;
+
+:visited, :active{
+  background-color: red;
+  text-underline: none;
+}
+&:hover{
+  background-color: black;
+  text-underline: none;
+}
 
 `;
 
@@ -48,11 +59,12 @@ export default () => (
       Philip has worked with brands such as Red Bull, Google, Ebay, Laterooms, Barclays, Fabric and more.      
       </h1>
     </Header>
-    <ProjecctCard>
-    <h2>
-      <Link to="/audio">Cambridge Audio</Link>
-    </h2>
+    <ProjecctCard to ="/audio">
+      <h2>
+      Cambridge Audio
+      </h2>
     </ProjecctCard> 
+    
   </Container>
-  </Page>
+</Page>
 );
