@@ -13,13 +13,12 @@ const Navigation = styled.div`
 const ListItems = styled.li`
     display: block;
     font-size: 30px;
-    text-decoration: none;
-    text-align: right;
 `;
 
 const List = styled.ul`
     list-style-type: none;
     font-family: 'Sailec-Regular';
+    text-decoration: none;
 `;
 
 export default () => (

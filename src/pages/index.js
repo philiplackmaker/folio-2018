@@ -26,7 +26,7 @@ const Container = styled.div`
 const Header = styled.div`
   grid-column-start: 1;
   grid-column-end: 11;
-  height:400px;
+  height:75vh;
   margin: 0;
 `;
 
