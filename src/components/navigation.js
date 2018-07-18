@@ -6,7 +6,6 @@ import styled from "styled-components";
 const Navigation = styled.div`
     width: 100%;
     height: 100px;
-    background-color: Black;
     margin: 0 auto;
     display: flex;
 `;
@@ -15,10 +14,12 @@ const ListItems = styled.li`
     display: block;
     font-size: 30px;
     text-decoration: none;
+    text-align: right;
 `;
 
 const List = styled.ul`
     list-style-type: none;
+    font-family: 'Sailec-Regular';
 `;
 
 export default () => (

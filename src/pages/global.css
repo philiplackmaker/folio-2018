@@ -3,8 +3,10 @@ body {
   }
 
 h1{
-      font-family: 'Sailec-Bold';
-      font-size: 2.5rem;
+      font-family: 'Sailec-Regular';
+      font-size: 3rem;
+      letter-spacing: .1rem;
+
   }
 
 h2{
