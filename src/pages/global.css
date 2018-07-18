@@ -2,6 +2,16 @@ body {
     margin: 0;
   }
 
-  h1{
-      font-family: 'Sailec-Regular';
+h1{
+      font-family: 'Sailec-Bold';
+      font-size: 2.5rem;
   }
+
+h2{
+    font-family: 'Sailec-Regular';
+}
+
+p{
+    font-family: 'Sailec-Regular';
+    font-size: 20px;
+}

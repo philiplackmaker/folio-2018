@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Navigation = styled.div`
     width: 100%;
     height: 100px;
-    background-color: red;
+    background-color: Black;
     margin: 0 auto;
     display: flex;
 `;
@@ -19,7 +19,6 @@ const ListItems = styled.li`
 
 const List = styled.ul`
     list-style-type: none;
-
 `;
 
 export default () => (
@@ -27,6 +26,9 @@ export default () => (
         <List>
           <ListItems>
             <Link to ="/">Home</Link>
+            <Link to ="/">About</Link>
+            <Link to ="/">Thinking</Link>
+            <Link to ="/">Blog</Link>
           </ListItems>
         </List>
 </Navigation>
