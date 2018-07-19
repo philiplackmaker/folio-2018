@@ -54,17 +54,14 @@ export default () => (
   <Container>
     <Header>
       <h1>
-      Philip Lackmaker is a lead product designers. Previously he led design at Potato, Method, ustwo 
-      & Village Green Studio. 
-      Philip has worked with brands such as Red Bull, Google, Ebay, Laterooms, Barclays, Fabric and more.      
-      </h1>
+Need to write a really long and wanky statement. So I look better than I am.      </h1>
     </Header>
     <ProjecctCard to ="/audio">
       <h2>
       Cambridge Audio
       </h2>
     </ProjecctCard> 
-    
+
   </Container>
 </Page>
 );
