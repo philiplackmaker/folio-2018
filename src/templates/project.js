@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import styled from "styled-components";
 
 import Navigation from '../components/navigation'
-import './global.css'
+import './global.scss'
 
 
 const Page = styled.div`

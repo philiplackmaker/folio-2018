@@ -3,8 +3,7 @@ import Link from "gatsby-link"
 import styled from "styled-components";
 
 import Navigation from '../components/navigation'
-import './global.css'
-
+import './global.scss'
 
 const Page = styled.div`
   margin: 0 ;
@@ -12,7 +11,6 @@ const Page = styled.div`
   width: 100%;
   postion: fixed;
 `;
-
 
 const Container = styled.div`
   margin: 0 auto;
