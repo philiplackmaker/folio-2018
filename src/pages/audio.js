@@ -23,7 +23,6 @@ const Container = styled.div`
 const ProjectHeader = styled.div`
 grid-column-start: 1;
 grid-column-end: 11;
-
 `;
 
 export default () => (
