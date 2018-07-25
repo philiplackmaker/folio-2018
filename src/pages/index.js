@@ -25,7 +25,7 @@ const Container = styled.div`
 const Header = styled.div`
   grid-column-start: 1;
   grid-column-end: 11;
-  height:50vh;
+  height90vh;
   margin: 0;
 `;
 
@@ -87,8 +87,8 @@ export default () => (
   <Container>
     <Header>
       <h1>
-Need to write a really long and wanky statement. So I look better than I am.      
-</h1>
+      Philip is an indepenent designer, previously lead teams at Potato, method, ustwo and Hellocar.
+      </h1>
     </Header>
     <ProjectContainer>
       <ProjecctCard to ="/audio">
