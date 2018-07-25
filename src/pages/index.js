@@ -36,6 +36,28 @@ display: flex;
 flex-wrap: wrap
 `;
 
+// const ProjecctCard = styled(Link)`
+// flex-grow: 1;
+// min-width: 10%;
+// height: 200px;
+// box-sizing: border-box;
+// margin: 10px;
+// background-color:lightgrey;
+// transition: all 0.2s ease-in;
+// :visited, :active{
+//   color: #4644FD;
+//   text-underline: none;
+// }
+// &:hover{
+//   background-color: #4644FD;
+//   text-underline: none;
+// }
+// h2{
+//   color: white;
+// }
+// `;
+
+
 const ProjecctCard = styled(Link)`
 flex-grow: 1;
 min-width: 10%;
@@ -57,6 +79,7 @@ h2{
 }
 `;
 
+
 export default () => (
    <Page>
     <Navigation>
@@ -64,7 +87,8 @@ export default () => (
   <Container>
     <Header>
       <h1>
-Need to write a really long and wanky statement. So I look better than I am.      </h1>
+Need to write a really long and wanky statement. So I look better than I am.      
+</h1>
     </Header>
     <ProjectContainer>
       <ProjecctCard to ="/audio">
@@ -72,16 +96,7 @@ Need to write a really long and wanky statement. So I look better than I am.    
         Cambridge Audio
         </h2>
       </ProjecctCard> 
-      <ProjecctCard to ="/audio">
-        <h2>
-        Cambridge Audio
-        </h2>
-      </ProjecctCard> 
-      <ProjecctCard to ="/audio">
-        <h2>
-        Cambridge Audio
-        </h2>
-    </ProjecctCard> 
+
     </ProjectContainer>
   </Container>
 </Page>

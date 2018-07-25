@@ -26,14 +26,17 @@ const ListItems = styled.li`
 const NavigationLink = styled(Link)`
     text-decoration: none;
     transition: all 0.4s ease-in;
+    color: black;
     :visited, :active{
-        color: $Brand-color;
+        color: black;
+;
         text-underline: none;
     }
     &:hover{
-        color: $Brand-color;
+        color: #4644FD;
         text-underline: none;
     }
+
 `;
 
 
@@ -42,6 +45,9 @@ export default () => (
     <List>
         <ListItems>
             <NavigationLink to ="/">Home</NavigationLink>
+        </ListItems>
+        <ListItems>
+            <Link to ="/">About</Link>
         </ListItems>
         <ListItems>
             <Link to ="/">About</Link>
