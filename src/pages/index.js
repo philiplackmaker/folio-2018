@@ -60,24 +60,48 @@ h2{
 `;
 
 
-export default () => (
-   <Page>
+const IndexPage = ({data}) => (
+  <Page>
     <Navigation>
     </Navigation>
   <Container>
     <Header>
       <h1>
-      Philip is an designer.
+      YoYoYo.
       </h1>
     </Header>
     <ProjectContainer>
-      <ProjecctCard to ="/audio">
-        <h2>
-        Cambridge Audio
-        </h2>
-      </ProjecctCard> 
+     
+      {data.allMarkdownRemark.edges.map(post => (
 
+      <ProjecctCard to ={post.node.frontmatter.path}>
+      <h2>{post.node.frontmatter.title}</h2>
+      </ProjecctCard> 
+        
+    ))}
     </ProjectContainer>
+
+   
   </Container>
 </Page>
-);
+)
+
+
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(limit: 10) {
+      edges {
+        node{
+          frontmatter {
+            title
+            path
+          }
+        }
+      }
+    }
+  }
+`
+
+export default IndexPage
+
