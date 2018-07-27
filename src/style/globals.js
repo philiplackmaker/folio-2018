@@ -12,10 +12,21 @@ injectGlobal `
         font-family: 'Sailec-Regular';
         font-size: 3rem;
         letter-spacing: .1rem;
+        text-align: center;
     }
 
     h2{
+        font-family: 'Sailec-BOLD';
+        color: ${Colors.BLACK};
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    h3{
         font-family: 'Sailec-Regular';
+        color: ${Colors.BLACK};
+        font-size: 2rem;
+        text-decroation: none;
     }
 
     p{

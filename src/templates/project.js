@@ -9,6 +9,7 @@ import '../style/globals';
 
 const Container = styled.div`
 ${Colors.GRID}
+background-color: ${Colors.BLACK};
 `;
 
 
