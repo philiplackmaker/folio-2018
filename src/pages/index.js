@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Navigation from '../components/navigation';
 import './fonts.css';
 import * as Colors from '../style/colors';
-import '../style/globals.js';
+import '../style/globals';
  
 const Page = styled.div`
   margin: 0 ;
@@ -17,11 +17,7 @@ const Page = styled.div`
 
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1080px;
-  display: grid;
-  grid-template-columns: repeat(10, 10% [col-start]);
-  grid-template-rows: 25% 100px auto;
+${Colors.GRID}
 `;
 
 const Header = styled.div`
@@ -71,17 +67,12 @@ const IndexPage = ({data}) => (
       </h1>
     </Header>
     <ProjectContainer>
-     
-      {data.allMarkdownRemark.edges.map(post => (
-
-      <ProjecctCard to ={post.node.frontmatter.path}>
-      <h2>{post.node.frontmatter.title}</h2>
-      </ProjecctCard> 
-        
+      {data.allMarkdownRemark.edges.map(project => (
+      <ProjecctCard to ={project.node.frontmatter.path}>
+      <h2>{project.node.frontmatter.title}</h2>
+      </ProjecctCard>   
     ))}
     </ProjectContainer>
-
-   
   </Container>
 </Page>
 )
