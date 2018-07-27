@@ -4,13 +4,15 @@ import styled from "styled-components";
 
 import Navigation from '../components/navigation';
 import './fonts.css';
-import './global.scss'
-
+import * as Colors from '../style/colors';
+import '../style/globals.js';
+ 
 const Page = styled.div`
   margin: 0 ;
   padding: 0;
   width: 100%;
   postion: fixed;
+  background-color: ${Colors.BLACK};
 `;
 
 
@@ -35,28 +37,6 @@ grid-column-end: 11;
 display: flex;
 flex-wrap: wrap
 `;
-
-// const ProjecctCard = styled(Link)`
-// flex-grow: 1;
-// min-width: 10%;
-// height: 200px;
-// box-sizing: border-box;
-// margin: 10px;
-// background-color:lightgrey;
-// transition: all 0.2s ease-in;
-// :visited, :active{
-//   color: #4644FD;
-//   text-underline: none;
-// }
-// &:hover{
-//   background-color: #4644FD;
-//   text-underline: none;
-// }
-// h2{
-//   color: white;
-// }
-// `;
-
 
 const ProjecctCard = styled(Link)`
 flex-grow: 1;
@@ -87,7 +67,7 @@ export default () => (
   <Container>
     <Header>
       <h1>
-      Philip is an indepenent designer, previously lead teams at Potato, method, ustwo and Hellocar.
+      Philip is an designer.
       </h1>
     </Header>
     <ProjectContainer>
