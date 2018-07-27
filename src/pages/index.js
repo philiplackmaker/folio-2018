@@ -55,7 +55,6 @@ h2{
 }
 `;
 
-
 const IndexPage = ({data}) => (
   <Page>
     <Navigation>
@@ -76,7 +75,6 @@ const IndexPage = ({data}) => (
   </Container>
 </Page>
 )
-
 
 
 export const pageQuery = graphql`
