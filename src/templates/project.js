@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Navigation from '../components/navigation';
 import styled from "styled-components";
-
 import '../pages/fonts.css';
 import * as Colors from '../style/colors';
 import '../style/globals';
@@ -12,12 +11,10 @@ ${Colors.GRID}
 background-color: ${Colors.BLACK};
 `;
 
-
 export default function Template({data}) {
   debugger;
   const {markdownRemark: project} = data;
   return (
- 
     <div>
         <Navigation>
         </Navigation>
@@ -26,7 +23,6 @@ export default function Template({data}) {
         {project.frontmatter.title}</h1>
         </Container>
     </div>
- 
   )
 }
 
@@ -37,6 +33,7 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        subtitle
       }
     }
   }

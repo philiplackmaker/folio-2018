@@ -20,7 +20,13 @@ const Header = styled.div`
   grid-column-start: 1;
   grid-column-end: 11;
   margin: 0;
+  height: 200px;
 `;
+
+const ProjectBackground =styled.div`
+width: 100%;
+background-color: ${Colors.LIGHT_GREY};
+`
 
 const ProjectContainer =styled.div`
 grid-column-start: 1;
@@ -36,39 +42,54 @@ min-width: 10%;
 height: 200px;
 box-sizing: border-box;
 margin: 10px;
+
+`;
+
+const ProjectHeader = styled.h2`
+bckground-color: red:
+`;
+
+const ProjectButton = styled.button`
+width: 200px;
+height: 100px;
 transition: all 0.2s ease-in;
 :visited, :active{
-  color:${Colors.PRIMARY}
-  text-underline: none;
+  color:rgba();
+  text-decoration: none;
 }
 &:hover{
   background-color:${Colors.PRIMARY}
-  text-underline: none;
+  text-decoration: none;
 }
+
 `;
-
-
 
 const IndexPage = ({data}) => (
   <Page>
     <Navigation>
     </Navigation>
-  <Container>
-    <Header>
+      <Header>
       <h1>
-      Philip is an designer, 
-previously lead teams at Potato, 
-method, ustwo and Hellocar.      </h1>
-    </Header>
+      Philip is an designer, previously lead teams at Potato, method, ustwo and Hellocar.</h1>
+      </Header>
+    <ProjectBackground>
+    <Container>
+
     <ProjectContainer>
       {data.allMarkdownRemark.edges.map(project => (
       <ProjecctCard to ={project.node.frontmatter.path}>
-      <h2>{project.node.frontmatter.title}</h2>
+      <ProjectHeader>{project.node.frontmatter.title}</ProjectHeader>
       <h3>{project.node.frontmatter.subtitle}</h3>
+      <ProjectButton to ={project.node.frontmatter.path}>
+      <h3>Read More</h3>
+        </ProjectButton>
+      
       </ProjecctCard>   
     ))}
     </ProjectContainer>
-  </Container>
+    </Container>
+    </ProjectBackground>
+ 
 </Page>
 )
 
