@@ -1,5 +1,5 @@
 ---
-path: test2
+path: /test
 title: test
 ---
-tesst
+test
