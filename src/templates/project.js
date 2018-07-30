@@ -25,12 +25,10 @@ export default function Template({data}) {
         </Navigation>
         <Container>
           <HeaderProeject>
-          <h2>
-        {project.frontmatter.title}</h2>
-        <p>{project.frontmatter.description}</p>
-            </HeaderProeject>
-       
-        </Container>
+            <h2>{project.frontmatter.title}</h2>
+            <p>{project.frontmatter.description}</p>
+          </HeaderProeject>
+       </Container>
     </div>
   )
 }
