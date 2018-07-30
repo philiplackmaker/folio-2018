@@ -7,7 +7,7 @@ plugins: [
   {
     resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/projects`,
         name: "pages",
   }
 },
