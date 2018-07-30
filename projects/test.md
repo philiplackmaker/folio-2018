@@ -1,6 +1,6 @@
 ---
-path: Test
+path: hello
 title: test
-subtitle: test
+subtitle: terst
 ---
 
