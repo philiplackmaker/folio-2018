@@ -4,11 +4,16 @@ import Navigation from '../components/navigation';
 import styled from "styled-components";
 import '../pages/fonts.css';
 import * as Colors from '../style/colors';
+import * as Base from '../style/base';
 import '../style/globals';
 
 const Container = styled.div`
-${Colors.GRID}
-background-color: ${Colors.BLACK};
+${Base.GRID};
+`;
+
+const HeaderProeject = styled.div`
+grid-column-start: 1;
+grid-column-end: 11;
 `;
 
 export default function Template({data}) {
@@ -19,8 +24,12 @@ export default function Template({data}) {
         <Navigation>
         </Navigation>
         <Container>
-        <h1>
-        {project.frontmatter.title}</h1>
+          <HeaderProeject>
+          <h2>
+        {project.frontmatter.title}</h2>
+        <p>{project.frontmatter.description}</p>
+            </HeaderProeject>
+       
         </Container>
     </div>
   )
@@ -34,6 +43,7 @@ export const postQuery = graphql`
         path
         title
         subtitle
+        description
       }
     }
   }
