@@ -16,7 +16,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             title
             subtitle
             description
-            description
+            notetitle
             cover_image {
               childImageSharp {
                 resolutions(width: 400) {

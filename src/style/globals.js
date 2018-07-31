@@ -8,7 +8,7 @@ injectGlobal `
     }
     h1{
         font-family: 'Sailec-Regular';
-        font-size: 3rem;
+        font-size:4rem;
         letter-spacing: .1rem;
         text-align: center;
     }
