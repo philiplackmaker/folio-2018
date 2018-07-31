@@ -4,13 +4,12 @@ import Helmet from 'react-helmet';
 import styled from "styled-components";
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
-
-
 import './fonts.css';
 import * as Colors from '../style/colors';
 import '../style/globals';
 import * as Base from '../style/base';
 import * as Type from '../style/typography';
+import Img from "gatsby-image";
 
  
 const Page = styled.div`
@@ -36,8 +35,8 @@ padding: 0;
 `
 
 const ProjectContainer =styled.div`
-grid-column-start: 4;
-grid-column-end: 11;
+grid-column-start: 1;
+grid-column-end: 12;
 display: flex;
 flex-wrap: wrap;
 padding-top: 80px;
@@ -46,11 +45,10 @@ padding-top: 80px;
 const ProjecctCard = styled(Link)`
 width: 100%;
 min-width: 10%;
-height: 200px;
+height: 240px;
 box-sizing: border-box;
-margin: 10px;
+margin: 16px;
 justify-content: space-around;
-
 `;
 
 const ProjectHeader = styled(Link)`
@@ -94,39 +92,42 @@ color: ${Colors.PRIMARY};
 text-decoration-color: ${Colors.LIGHT_GREY}; //Hacked to turn it off maybe find a better solution
 `;
 
+const ProjectTeaserImage = styled.div`
+width:200px;
+float: right;
+`;
 
 const IndexPage = ({data}) => (
   <Page>
     <Navigation>
     </Navigation>
       <Header>
-      <h1>
-      Philip is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
+       <h1>Philip is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
       </Header>
     <ProjectBackground>
-    <Container>
-
-    <ProjectContainer>
-      {data.allMarkdownRemark.edges.map(project => (
-        <ProjecctCard to ={project.node.frontmatter.path}>
-        <ProjectNotes>{project.node.frontmatter.notetitle}</ProjectNotes>
-        <div></div>
-        <ProjectHeader>{project.node.frontmatter.title}</ProjectHeader>
-        <div></div>
-        <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
-        <div></div>
-        <ProjectButton to ={project.node.frontmatter.path}>
-        <div></div>
-        <ProjectButtonText>Read More</ProjectButtonText>
-        </ProjectButton>
-        </ProjecctCard>   
-    ))}
-    </ProjectContainer>
-    </Container>
+      <Container>
+         <ProjectContainer>
+              {data.allMarkdownRemark.edges.map(project => (
+                <ProjecctCard to ={project.node.frontmatter.path}>
+                    <ProjectNotes>{project.node.frontmatter.note_title}</ProjectNotes>
+                    <div></div>
+                    <ProjectHeader>{project.node.frontmatter.title}</ProjectHeader>
+                    <div></div>
+                    <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
+                    <div></div>
+                    <ProjectButton to ={project.node.frontmatter.path}>
+                      <ProjectButtonText>Read More</ProjectButtonText>
+                    </ProjectButton>
+                  <ProjectTeaserImage>
+                   <Img sizes={project.node.frontmatter.teaser_image.childImageSharp.sizes}/>
+                </ProjectTeaserImage>
+                </ProjecctCard>   
+            ))}
+        </ProjectContainer>
+      </Container>
     </ProjectBackground>
     <Footer>
-      </Footer>
- 
+    </Footer>
 </Page>
 )
 
@@ -140,7 +141,14 @@ export const pageQuery = graphql`
             title
             path
             subtitle
-            notetitle
+            note_title
+            teaser_image{
+              childImageSharp{
+                sizes(maxWidth: 200){
+              ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
