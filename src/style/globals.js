@@ -11,6 +11,8 @@ injectGlobal `
         font-size:4rem;
         letter-spacing: .1rem;
         text-align: center;
+        padding: 0px;
+        margin: 0px;
     }
     h2{
         font-family: 'Sailec-BOLD';

@@ -10,7 +10,9 @@ import '../style/globals';
 import * as Base from '../style/base';
 import * as Type from '../style/typography';
 import Img from "gatsby-image";
+import Line from '../images/small_underline.svg'
 
+console.log(Line);
  
 const Page = styled.div`
   margin: 0;
@@ -26,6 +28,7 @@ const Header = styled.div`
   grid-column-end: 11;
   margin: 0;
   height: 60vh;
+
 `;
 
 const ProjectBackground =styled.div`
@@ -59,7 +62,7 @@ const ProjectHeader = styled(Link)`
 
 const ProjectButton = styled.button`
 width: 200px;
-height: 70px;
+height: 64px;
 border: none;
 background-color: ${Colors.PRIMARY}
 margin-top: 20px;
@@ -97,13 +100,30 @@ width:200px;
 float: right;
 `;
 
+const UnderLine = styled.span`
+z-index: -1;
+background-image: url(${Line});
+background-repeat: no-repeat, repeat;
+background-position: bottom;
+`;
+
+const UnderlineText = styled.div`
+${Type.NOTES}
+color:${Colors.PRIMARY};
+margin-left: 10%;
+`;
+
 const IndexPage = ({data}) => (
   <Page>
     <Navigation>
     </Navigation>
       <Header>
-       <h1>Philip is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
-      </Header>
+          <UnderlineText>*That is me...I don’t usually talk in third person.</UnderlineText>
+          
+           
+     
+       <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
+      </Header>  
     <ProjectBackground>
       <Container>
          <ProjectContainer>
