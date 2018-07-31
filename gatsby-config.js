@@ -12,12 +12,14 @@ plugins: [
         name: "pages",
   },
 },
- {
-      resolve: 'gatsby-plugin-netlify-cms',
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-remark-images`,
       options: {
-        // modulePath: `${__dirname}/src/cms/cms.js`,
+        maxWidth: 1080,
       },
     },
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

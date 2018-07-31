@@ -6,6 +6,8 @@ import '../pages/fonts.css';
 import * as Colors from '../style/colors';
 import * as Base from '../style/base';
 import '../style/globals';
+import Img from "gatsby-image";
+
 
 const Container = styled.div`
 ${Base.GRID};
@@ -15,6 +17,7 @@ const HeaderProeject = styled.div`
 grid-column-start: 1;
 grid-column-end: 11;
 `;
+
 
 export default function Template({data}) {
   debugger;
@@ -27,6 +30,7 @@ export default function Template({data}) {
           <HeaderProeject>
             <h2>{project.frontmatter.title}</h2>
             <p>{project.frontmatter.description}</p>
+            <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
           </HeaderProeject>
        </Container>
     </div>
@@ -42,6 +46,16 @@ export const postQuery = graphql`
         title
         subtitle
         description
+        cover_image{
+          childImageSharp{
+            sizes(maxWidth: 1240 ) {
+              ...GatsbyImageSharpSizes
+
+            }
+
+          }
+
+        }
       }
     }
   }

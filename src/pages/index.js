@@ -70,7 +70,7 @@ const IndexPage = ({data}) => (
     </Navigation>
       <Header>
       <h1>
-      Philip is an designer, previously lead teams at Potato, method, ustwo and Hellocar.</h1>
+      Philip is an designer.</h1>
       </Header>
     <ProjectBackground>
     <Container>

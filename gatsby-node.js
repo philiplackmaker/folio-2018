@@ -16,6 +16,18 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             title
             subtitle
             description
+            description
+            cover_image {
+              childImageSharp {
+                resolutions(width: 400) {
+                  width
+                  height
+                  src
+                  srcSet
+                }
+              }
+            }
+            
           }
         }
       }
