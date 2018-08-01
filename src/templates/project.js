@@ -20,10 +20,13 @@ const Proeject = styled.div`
 grid-column: 1 / span 5;
 `;
 
+const Test = styled.div`
+`;
 
 export default function Template({data}) {
   debugger;
   const {markdownRemark: project} = data;
+
   return (
     <div>
         <Navigation>
@@ -37,6 +40,7 @@ export default function Template({data}) {
             <h3>{project.frontmatter.subtitle}</h3>
             <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
             <p>{project.frontmatter.brief}</p>
+            <div dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>
        </Container>
        <Footer>
@@ -48,7 +52,7 @@ export default function Template({data}) {
 export const postQuery = graphql`
   query ProjectByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path} }) {
-      html
+      html 
       frontmatter {
         path
         title

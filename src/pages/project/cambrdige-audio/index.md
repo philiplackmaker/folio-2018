@@ -10,3 +10,5 @@ cover_image: './jumbotron.jpg'
 ---
 
 Hello! This is our first blog post.it too
+
+![image](https://www.yourcat.co.uk/images/legacy/catimages/Breed_AmericanCurl/healthykittenmain.jpg)
