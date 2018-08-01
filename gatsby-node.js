@@ -15,7 +15,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             path
             title
             subtitle
-            brief
           }
         }
       }

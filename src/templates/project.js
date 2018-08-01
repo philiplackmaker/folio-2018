@@ -35,6 +35,7 @@ export default function Template({data}) {
 
             <h2>{project.frontmatter.title}</h2>
             <h3>{project.frontmatter.subtitle}</h3>
+            <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
             <p>{project.frontmatter.brief}</p>
           </Proeject>
        </Container>
@@ -55,7 +56,7 @@ export const postQuery = graphql`
         brief
         cover_image{
           childImageSharp{
-            sizes(maxHeight: 350 ) {
+            sizes(maxWidth: 1240 ) {
               ...GatsbyImageSharpSizes
             }
           }

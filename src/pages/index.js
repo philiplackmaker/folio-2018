@@ -10,8 +10,9 @@ import * as Colors from '../style/colors';
 import '../style/globals';
 import * as Base from '../style/base';
 import * as Type from '../style/typography';
+import Line from '../images/small_underline.svg';
 import Img from "gatsby-image";
-import Line from '../images/small_underline.svg'
+
 
 console.log(Line);
  
@@ -32,8 +33,8 @@ const ProjectBackground =styled.div`
   width: 100%;
   background-color: ${Colors.LIGHT_GREY};
   padding: 0;
-  height: 1000px;
-`
+  height: 900px;
+`;
 
 
 
@@ -72,7 +73,6 @@ const ProjectNotes = styled(Link)`
 const ProjectTeaserImage = styled.div`
   width: 260px;
   height: 100%;
-  float: right;
 `;
 
 const UnderLine = styled.span`
@@ -111,7 +111,7 @@ const IndexPage = ({data}) => (
                     </ButtonSmall>
                   </ProjectInfo>
                   <ProjectTeaserImage>
-                   <Img sizes={project.node.frontmatter.teaser_image.childImageSharp.sizes}/>
+                   <Img sizes={project.node.frontmatter.small_image.childImageSharp.sizes}/>
                 </ProjectTeaserImage>
               </ProjectCard>   
             ))}
@@ -133,9 +133,9 @@ export const pageQuery = graphql`
             path
             subtitle
             note_title
-            teaser_image{
+            small_image{
               childImageSharp{
-                sizes(maxWidth: 200){
+                sizes(maxHeight: 200){
               ...GatsbyImageSharpSizes
                 }
               }
