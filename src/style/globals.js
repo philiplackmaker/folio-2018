@@ -32,5 +32,7 @@ injectGlobal `
         font-family: 'Sailec-Regular';
         font-size: 20px;
     }
-
+    a{
+        text-decoration: none;
+    }
 `;

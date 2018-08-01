@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from "styled-components";
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
+import ButtonSmall from '../components/buttonsmall';
 import './fonts.css';
 import * as Colors from '../style/colors';
 import '../style/globals';
@@ -24,80 +25,54 @@ ${Base.GRID}
 `;
 
 const Header = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 11;
-  margin: 0;
   height: 60vh;
-
 `;
 
 const ProjectBackground =styled.div`
-width: 100%;
-background-color: ${Colors.LIGHT_GREY};
-padding: 0;
+  width: 100%;
+  background-color: ${Colors.LIGHT_GREY};
+  padding: 0;
+  height: 1000px;
 `
 
-const ProjectContainer =styled.div`
-grid-column-start: 1;
-grid-column-end: 12;
+
+
+const ProjectCard = styled(Link)`
+  grid-column: 1 / span 5;
+  height: 240px;
+  margin: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 100px 0 100px 0;
+`;
+
+const ProjectInfo = styled.div `
 display: flex;
-flex-wrap: wrap;
-padding-top: 80px;
-`;
-
-const ProjecctCard = styled(Link)`
-width: 100%;
-min-width: 10%;
-height: 240px;
-box-sizing: border-box;
-margin: 16px;
-justify-content: space-around;
-`;
-
+flex-direction: column;
+width: 70%;
+justify-content:space-between;
+`
 const ProjectHeader = styled(Link)`
   ${Type.SUBHEADER};
   color: ${Colors.BLACK};
   text-decoration-color: ${Colors.LIGHT_GREY}; //Hacked to turn it off maybe find a better solution
 `;
 
-const ProjectButton = styled.button`
-width: 200px;
-height: 64px;
-border: none;
-background-color: ${Colors.PRIMARY}
-margin-top: 20px;
-cursor: pointer;
-transition: all 0.2s ease-in;
-:visited, :active{
-  border: none;
-
-}
-&:hover{
-  background-color:${Colors.PRIMARY}
-  border: none;
-}
-`;
-
-const ProjectButtonText = styled.text`
-${Type.BODY}
-color:${Colors.WHITE}
-`;
-
 const ProjectSubtitle = styled(Link)`
-${Type.LARGEBODY}
-color: ${Colors.BLACK};
-text-decoration-color: ${Colors.LIGHT_GREY}; //Hacked to turn it off maybe find a better solution
+  ${Type.LARGEBODY}
+  color: ${Colors.BLACK};
 `;
 
 const ProjectNotes = styled(Link)`
-${Type.NOTES}
-color: ${Colors.PRIMARY};
-text-decoration-color: ${Colors.LIGHT_GREY}; //Hacked to turn it off maybe find a better solution
+  ${Type.NOTES}
+  color: ${Colors.PRIMARY};
 `;
 
 const ProjectTeaserImage = styled.div`
-width:200px;
-float: right;
+  width: 260px;
+  height: 100%;
+  float: right;
 `;
 
 const UnderLine = styled.span`
@@ -119,31 +94,27 @@ const IndexPage = ({data}) => (
     </Navigation>
       <Header>
           <UnderlineText>*That is me...I don’t usually talk in third person.</UnderlineText>
-          
-           
-     
-       <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
+          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
       </Header>  
     <ProjectBackground>
       <Container>
-         <ProjectContainer>
               {data.allMarkdownRemark.edges.map(project => (
-                <ProjecctCard to ={project.node.frontmatter.path}>
+                <ProjectCard to ={project.node.frontmatter.path}>
+                <ProjectInfo>
                     <ProjectNotes>{project.node.frontmatter.note_title}</ProjectNotes>
                     <div></div>
                     <ProjectHeader>{project.node.frontmatter.title}</ProjectHeader>
                     <div></div>
                     <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
                     <div></div>
-                    <ProjectButton to ={project.node.frontmatter.path}>
-                      <ProjectButtonText>Read More</ProjectButtonText>
-                    </ProjectButton>
+                   <ButtonSmall  to ={project.node.frontmatter.path}>
+                    </ButtonSmall>
+                  </ProjectInfo>
                   <ProjectTeaserImage>
                    <Img sizes={project.node.frontmatter.teaser_image.childImageSharp.sizes}/>
                 </ProjectTeaserImage>
-                </ProjecctCard>   
+              </ProjectCard>   
             ))}
-        </ProjectContainer>
       </Container>
     </ProjectBackground>
     <Footer>

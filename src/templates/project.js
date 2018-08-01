@@ -1,21 +1,23 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Navigation from '../components/navigation';
+import ButtonSmall from '../components/buttonsmall'
 import styled from "styled-components";
 import '../pages/fonts.css';
 import * as Colors from '../style/colors';
 import * as Base from '../style/base';
 import '../style/globals';
 import Img from "gatsby-image";
+import Footer from '../components/footer';
+
 
 
 const Container = styled.div`
 ${Base.GRID};
 `;
 
-const HeaderProeject = styled.div`
-grid-column-start: 1;
-grid-column-end: 11;
+const Proeject = styled.div`
+grid-column: 1 / span 5;
 `;
 
 
@@ -26,13 +28,18 @@ export default function Template({data}) {
     <div>
         <Navigation>
         </Navigation>
+        <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
+
         <Container>
-          <HeaderProeject>
+        <Proeject>
+
             <h2>{project.frontmatter.title}</h2>
-            <p>{project.frontmatter.description}</p>
-            <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
-          </HeaderProeject>
+            <h3>{project.frontmatter.subtitle}</h3>
+            <p>{project.frontmatter.brief}</p>
+          </Proeject>
        </Container>
+       <Footer>
+      </Footer>
     </div>
   )
 }
@@ -45,13 +52,14 @@ export const postQuery = graphql`
         path
         title
         subtitle
-        description
+        brief
         cover_image{
           childImageSharp{
-            sizes(maxWidth: 1240 ) {
+            sizes(maxHeight: 350 ) {
               ...GatsbyImageSharpSizes
             }
           }
+
         }
       }
     }
