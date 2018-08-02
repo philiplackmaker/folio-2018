@@ -30,17 +30,13 @@ grid-column: 1 / span 1;
 export default function Template({data}) {
   debugger;
   const {markdownRemark: project} = data;
-
   return (
     <div>
         <Navigation>
         </Navigation>
-        
         <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
-
         <Container>
-        <Proeject>
-
+          <Proeject>
             <h2>{project.frontmatter.title}</h2>
             <h3>{project.frontmatter.subtitle}</h3>
             <Content dangerouslySetInnerHTML={{ __html: project.html }}/>

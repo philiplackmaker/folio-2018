@@ -4,6 +4,11 @@ plugins: [
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-sass`,
 
+  `gatsby-remark-copy-linked-files`,
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-sharp`,
+
+
   {
     resolve: `gatsby-source-filesystem`,
       options: {
@@ -12,22 +17,19 @@ plugins: [
   },
 },
 
-    `gatsby-remark-copy-linked-files`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
 
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 1080,
-      },
-    },
 
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         // In your gatsby-transformer-remark plugin array
         plugins: [{
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 1080,
+            pathPrefix: '/images',
+    
+          },
           resolve: 'gatsby-remark-emojis',
           options: {
             // Deactivate the plugin globally (default: true)
