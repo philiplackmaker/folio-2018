@@ -72,7 +72,6 @@ const ProjectNotes = styled(Link)`
 
 const ProjectTeaserImage = styled.div`
   width: 260px;
-  height: 100%;
 `;
 
 const UnderLine = styled.span`
@@ -135,7 +134,7 @@ export const pageQuery = graphql`
             note_title
             small_image{
               childImageSharp{
-                sizes(maxHeight: 200){
+                sizes(maxHeight: 700){
               ...GatsbyImageSharpSizes
                 }
               }

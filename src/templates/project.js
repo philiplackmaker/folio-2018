@@ -23,6 +23,10 @@ grid-column: 1 / span 5;
 const Test = styled.div`
 `;
 
+const Content = styled.div`
+grid-column: 1 / span 1;
+`;
+
 export default function Template({data}) {
   debugger;
   const {markdownRemark: project} = data;
@@ -31,6 +35,7 @@ export default function Template({data}) {
     <div>
         <Navigation>
         </Navigation>
+        
         <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
 
         <Container>
@@ -38,9 +43,7 @@ export default function Template({data}) {
 
             <h2>{project.frontmatter.title}</h2>
             <h3>{project.frontmatter.subtitle}</h3>
-            <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
-            <p>{project.frontmatter.brief}</p>
-            <div dangerouslySetInnerHTML={{ __html: project.html }}/>
+            <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>
        </Container>
        <Footer>
@@ -57,7 +60,6 @@ export const postQuery = graphql`
         path
         title
         subtitle
-        brief
         cover_image{
           childImageSharp{
             sizes(maxWidth: 1240 ) {
