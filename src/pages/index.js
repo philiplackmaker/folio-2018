@@ -93,8 +93,8 @@ const IndexPage = ({data}) => (
     <Navigation>
     </Navigation>
       <Header>
-          <UnderlineText>*That is me...I don’t usually talk in third person.</UnderlineText>
-          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
+          <UnderlineText>*That is me....</UnderlineText>
+          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato , method, ustwo and Hellocar.</h1>
       </Header>  
     <ProjectBackground>
       <Container>
