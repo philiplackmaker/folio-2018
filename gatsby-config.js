@@ -27,7 +27,7 @@ plugins: [
           resolve: `gatsby-remark-images`,
           options: {
             maxWidth: 1080,
-            pathPrefix: '/images',
+            pathPrefix: '/static',
     
           },
           resolve: 'gatsby-remark-emojis',
