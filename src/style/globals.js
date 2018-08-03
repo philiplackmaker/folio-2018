@@ -6,6 +6,10 @@ injectGlobal `
     body{
         margin: 0;
     }
+
+    html {
+        font-size: 100%;
+    }
     h1{
         font-family: 'Sailec-Regular';
         font-size:4rem;
@@ -30,9 +34,18 @@ injectGlobal `
     }
     p{
         font-family: 'Sailec-Regular';
-        font-size: 20px;
+        font-size: 2rem;
     }
     a{
         text-decoration: none;
+    }
+
+    ol{
+        font-family: 'Sailec-Regular';
+        color: ${Colors.BLACK};
+        font-size: 1.5rem;
+        letter-spacing: .05rem;
+
+        text-decroation: none;
     }
 `;

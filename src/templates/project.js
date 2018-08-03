@@ -27,6 +27,9 @@ const Content = styled.div`
 grid-column: 1 / span 1;
 `;
 
+const HeroImage = styled.div`
+`;
+
 export default function Template({data}) {
   debugger;
   const {markdownRemark: project} = data;
@@ -34,7 +37,9 @@ export default function Template({data}) {
     <div>
         <Navigation>
         </Navigation>
-        <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
+        <HeroImage>
+          <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
+        </HeroImage>
         <Container>
           <Proeject>
             <h2>{project.frontmatter.title}</h2>
@@ -58,7 +63,7 @@ export const postQuery = graphql`
         subtitle
         cover_image{
           childImageSharp{
-            sizes(maxWidth: 1240 ) {
+            sizes(maxHeight: 600 ) {
               ...GatsbyImageSharpSizes
             }
           }
