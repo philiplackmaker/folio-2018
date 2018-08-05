@@ -1,16 +1,13 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Navigation from '../components/navigation';
-import ButtonSmall from '../components/buttonsmall'
 import styled from "styled-components";
 import '../pages/fonts.css';
-import * as Colors from '../style/colors';
 import * as Base from '../style/base';
 import '../style/globals';
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import Footer from '../components/footer';
-
-
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Container = styled.div`
 ${Base.GRID};
@@ -18,9 +15,6 @@ ${Base.GRID};
 
 const Proeject = styled.div`
 grid-column: 1 / span 5;
-`;
-
-const Test = styled.div`
 `;
 
 const Content = styled.div`
@@ -38,7 +32,7 @@ export default function Template({data}) {
         <Navigation>
         </Navigation>
         <HeroImage>
-          <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
+          <Img fluid={project.frontmatter.cover_image.childImageSharp.fluid}/>
         </HeroImage>
         <Container>
           <Proeject>
@@ -53,6 +47,7 @@ export default function Template({data}) {
   )
 }
 
+
 export const postQuery = graphql`
   query ProjectByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path} }) {
@@ -63,13 +58,13 @@ export const postQuery = graphql`
         subtitle
         cover_image{
           childImageSharp{
-            sizes(maxHeight: 600 ) {
-              ...GatsbyImageSharpSizes
+            fluid(maxHeight: 600 ) {
+              ...GatsbyImageSharpFluid
             }
           }
-
         }
       }
     }
   }
 `
+
