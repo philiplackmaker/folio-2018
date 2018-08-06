@@ -25,8 +25,7 @@ const HeroImage = styled.div`
 `;
 
 export default function Template({data}) {
-  debugger;
-  const {markdownRemark: project} = data;
+  const {markdownRemark: project,} = data;
   return (
     <div>
         <Navigation>
