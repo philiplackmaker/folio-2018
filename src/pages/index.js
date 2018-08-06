@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
-import Helmet from 'react-helmet';
+import { Link } from "gatsby"
 import styled from "styled-components";
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
@@ -10,8 +9,10 @@ import * as Colors from '../style/colors';
 import '../style/globals';
 import * as Base from '../style/base';
 import * as Type from '../style/typography';
+import Line from '../images/small_underline.svg';
+import { graphql } from 'gatsby';
 import Img from "gatsby-image";
-import Line from '../images/small_underline.svg'
+
 
 console.log(Line);
  
@@ -32,8 +33,8 @@ const ProjectBackground =styled.div`
   width: 100%;
   background-color: ${Colors.LIGHT_GREY};
   padding: 0;
-  height: 1000px;
-`
+  height: 900px;
+`;
 
 
 
@@ -71,8 +72,6 @@ const ProjectNotes = styled(Link)`
 
 const ProjectTeaserImage = styled.div`
   width: 260px;
-  height: 100%;
-  float: right;
 `;
 
 const UnderLine = styled.span`
@@ -93,8 +92,8 @@ const IndexPage = ({data}) => (
     <Navigation>
     </Navigation>
       <Header>
-          <UnderlineText>*That is me...I don’t usually talk in third person.</UnderlineText>
-          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato, method, ustwo and Hellocar.</h1>
+          <UnderlineText>*That is me....</UnderlineText>
+          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato , method, ustwo and Hellocar.</h1>
       </Header>  
     <ProjectBackground>
       <Container>
@@ -107,11 +106,11 @@ const IndexPage = ({data}) => (
                     <div></div>
                     <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
                     <div></div>
-                   <ButtonSmall  to ={project.node.frontmatter.path}>
+                   <ButtonSmall to ={project.node.frontmatter.path}>
                     </ButtonSmall>
                   </ProjectInfo>
                   <ProjectTeaserImage>
-                   <Img sizes={project.node.frontmatter.teaser_image.childImageSharp.sizes}/>
+                   <Img fluid={project.node.frontmatter.small_image.childImageSharp.fluid}/>
                 </ProjectTeaserImage>
               </ProjectCard>   
             ))}
@@ -133,13 +132,14 @@ export const pageQuery = graphql`
             path
             subtitle
             note_title
-            teaser_image{
-              childImageSharp{
-                sizes(maxWidth: 200){
-              ...GatsbyImageSharpSizes
+            small_image{
+                childImageSharp{
+                  fluid(maxHeight: 600 ) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
-            }
+      
           }
         }
       }

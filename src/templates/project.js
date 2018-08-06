@@ -1,16 +1,13 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Navigation from '../components/navigation';
-import ButtonSmall from '../components/buttonsmall'
 import styled from "styled-components";
 import '../pages/fonts.css';
-import * as Colors from '../style/colors';
 import * as Base from '../style/base';
 import '../style/globals';
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import Footer from '../components/footer';
-
-
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Container = styled.div`
 ${Base.GRID};
@@ -20,22 +17,27 @@ const Proeject = styled.div`
 grid-column: 1 / span 5;
 `;
 
+const Content = styled.div`
+grid-column: 1 / span 1;
+`;
+
+const HeroImage = styled.div`
+`;
 
 export default function Template({data}) {
-  debugger;
-  const {markdownRemark: project} = data;
+  const {markdownRemark: project,} = data;
   return (
     <div>
         <Navigation>
         </Navigation>
-        <Img sizes={project.frontmatter.cover_image.childImageSharp.sizes}/>
-
+        <HeroImage>
+          <Img fluid={project.frontmatter.cover_image.childImageSharp.fluid}/>
+        </HeroImage>
         <Container>
-        <Proeject>
-
+          <Proeject>
             <h2>{project.frontmatter.title}</h2>
             <h3>{project.frontmatter.subtitle}</h3>
-            <p>{project.frontmatter.brief}</p>
+            <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>
        </Container>
        <Footer>
@@ -44,24 +46,24 @@ export default function Template({data}) {
   )
 }
 
+
 export const postQuery = graphql`
   query ProjectByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path} }) {
-      html
+      html 
       frontmatter {
         path
         title
         subtitle
-        brief
         cover_image{
           childImageSharp{
-            sizes(maxHeight: 350 ) {
-              ...GatsbyImageSharpSizes
+            fluid(maxHeight: 600 ) {
+              ...GatsbyImageSharpFluid
             }
           }
-
         }
       }
     }
   }
 `
+

@@ -9,7 +9,7 @@ const ButtonSmall = styled.button`
     width: 200px;
     height: 64px;
     border: none;
-    background-color: ${Colors.PRIMARY}
+    background-color: ${Colors.PRIMARY};
     margin-top: 20px;
     padding: 16px;
     cursor: pointer;
