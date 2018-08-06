@@ -8,7 +8,11 @@ cover_image: './jumbotron.jpg'
 
 ---
 
-![image](./kitten.png)
+![image](kitten.png)
+![](image_preview.gif)
+![image](./IMG_20180306_112000_preview.jpeg)
+<iframe src="https://marvelapp.com/40h1a5j?emb=1&iosapp=false&frameless=false" width="452" height="200" allowTransparency="true" frameborder="0"></iframe>
+
 
 ###The Brief
 Cambridge Audio came to Potato to help them design an iOS and Android application for a new multi-room speaker range - The Evo system. They also wanted to learn product development and lean UX. Whilst on the project I was the product lead; leading the process; gathering research, planning and running the workshop, running the user testing and leading the design of the appl****ication.

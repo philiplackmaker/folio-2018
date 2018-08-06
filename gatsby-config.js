@@ -18,10 +18,12 @@ module.exports = {
       options: {
         // In your gatsby-transformer-remark plugin array
         plugins: [
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1080,
+              maxWidth: 200,
             },
           },
           {
