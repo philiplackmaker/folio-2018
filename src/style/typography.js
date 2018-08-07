@@ -24,7 +24,7 @@ margin: 0;
 `;
 
 export const NOTES = `
-    font-family: 'Georgia';
+    font-family: 'GT-Super-Book';
     font-size: 20px;
     text-align: left;
     padding: 0;
