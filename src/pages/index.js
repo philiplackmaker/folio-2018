@@ -112,9 +112,11 @@ const IndexPage = ({data}) => (
                   <ProjectTeaserImage>
                    <Img fluid={project.node.frontmatter.small_image.childImageSharp.fluid}/>
                 </ProjectTeaserImage>
+                
               </ProjectCard>   
             ))}
       </Container>
+      
     </ProjectBackground>
     <Footer>
     </Footer>
