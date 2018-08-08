@@ -116,7 +116,6 @@ const IndexPage = ({data}) => (
               </ProjectCard>   
             ))}
       </Container>
-      
     </ProjectBackground>
     <Footer>
     </Footer>
@@ -140,7 +139,8 @@ export const pageQuery = graphql`
                     ...GatsbyImageSharpFluid
                   }
                 }
-              } 
+              }
+      
           }
         }
       }
