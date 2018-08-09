@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby"
 import styled from "styled-components";
 import Navigation from '../components/navigation';
-import Footer from '../components/footer';
 import ButtonSmall from '../components/buttonsmall';
 import './fonts.css';
 import * as Colors from '../style/colors';
@@ -12,6 +11,7 @@ import * as Type from '../style/typography';
 import Line from '../images/small_underline.svg';
 import { graphql } from 'gatsby';
 import Img from "gatsby-image";
+import FooterEverything from '../components/footereverything';
 
 
 console.log(Line);
@@ -46,6 +46,17 @@ const ProjectCard = styled(Link)`
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 100px 0 100px 0;
+    // &:nth-child(2)
+    // {
+    //   background-color: red;
+    // }
+
+    // &:nth-child(1)
+    // {
+    //   background-color: red;
+    // }
+
+
 `;
 
 const ProjectInfo = styled.div `
@@ -118,15 +129,14 @@ const IndexPage = ({data}) => (
       </Container>
       
     </ProjectBackground>
-    <Footer>
-    </Footer>
+    <FooterEverything></FooterEverything>
 </Page>
 )
 
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(limit: 10) {
+    allMarkdownRemark(limit: 3) {
       edges {
         node{
           frontmatter {

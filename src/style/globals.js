@@ -32,6 +32,15 @@ injectGlobal `
         font-size: 2rem;
         text-decroation: none;
     }
+
+    h6{
+        font-family: 'Sailec-Regular';
+        color: ${Colors.BLACK};
+        font-size: 1rem;
+        text-decroation: none;
+        padding: 0px;
+        margin: 0px;
+    }
     p{
         font-family: 'Sailec-Regular';
         font-size: 2rem;

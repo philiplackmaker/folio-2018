@@ -5,9 +5,10 @@ import '../pages/fonts.css';
 import * as Base from '../style/base';
 import '../style/globals';
 // import Img from "gatsby-image";
-import Footer from '../components/footer';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import FooterEverything from '../components/footereverything';
+
 
 const Container = styled.div`
 ${Base.GRID};
@@ -40,8 +41,7 @@ export default function Template({data}) {
             <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>
        </Container>
-       <Footer>
-      </Footer>
+       <FooterEverything></FooterEverything>
     </div>
   )
 }
