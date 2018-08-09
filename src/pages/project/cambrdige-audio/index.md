@@ -9,9 +9,9 @@ cover_image: './jumbotron.jpg'
 ---
 
 ![image](kitten.png)
-![](image_preview.gif)
+<!-- ![](image_preview.gif) -->
 ![image](IMG_20180306_112000_preview.jpeg)
-<iframe src="https://marvelapp.com/40h1a5j?emb=1&iosapp=false&frameless=false" width="452" height="200" allowTransparency="true" frameborder="0"></iframe>
+<!-- <iframe src="https://marvelapp.com/40h1a5j?emb=1&iosapp=false&frameless=false" width="452" height="200" allowTransparency="true" frameborder="0"></iframe> -->
 
 
 ###The Brief

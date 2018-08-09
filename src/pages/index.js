@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby"
 import styled from "styled-components";
 import Navigation from '../components/navigation';
-import Footer from '../components/footer';
 import ButtonSmall from '../components/buttonsmall';
 import './fonts.css';
 import * as Colors from '../style/colors';
@@ -12,9 +11,7 @@ import * as Type from '../style/typography';
 import Line from '../images/small_underline.svg';
 import { graphql } from 'gatsby';
 import Img from "gatsby-image";
-
-
-console.log(Line);
+import FooterEverything from '../components/footereverything';
  
 const Page = styled.div`
   margin: 0;
@@ -26,17 +23,15 @@ ${Base.GRID}
 `;
 
 const Header = styled.div`
-  height: 60vh;
+  height: 40vh;
 `;
 
 const ProjectBackground =styled.div`
   width: 100%;
   background-color: ${Colors.LIGHT_GREY};
   padding: 0;
-  height: 900px;
+  height: 1200px
 `;
-
-
 
 const ProjectCard = styled(Link)`
   grid-column: 1 / span 5;
@@ -46,18 +41,27 @@ const ProjectCard = styled(Link)`
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 100px 0 100px 0;
+    // &:nth-child(2)
+    // {
+    //   background-color: red;
+    // }
+
+    // &:nth-child(1)
+    // {
+    //   background-color: red;
+    // }
 `;
 
 const ProjectInfo = styled.div `
-display: flex;
-flex-direction: column;
-width: 70%;
-justify-content:space-between;
-`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content:space-between;
+`;
+
 const ProjectHeader = styled(Link)`
   ${Type.SUBHEADER};
   color: ${Colors.BLACK};
-  text-decoration-color: ${Colors.LIGHT_GREY}; //Hacked to turn it off maybe find a better solution
 `;
 
 const ProjectSubtitle = styled(Link)`
@@ -75,16 +79,42 @@ const ProjectTeaserImage = styled.div`
 `;
 
 const UnderLine = styled.span`
-z-index: -1;
-background-image: url(${Line});
-background-repeat: no-repeat, repeat;
-background-position: bottom;
+  z-index: -1;
+  background-image: url(${Line});
+  background-repeat: no-repeat, repeat;
+  background-position: bottom;
 `;
 
 const UnderlineText = styled.div`
-${Type.NOTES}
-color:${Colors.PRIMARY};
-margin-left: 10%;
+  ${Type.NOTES}
+  color:${Colors.PRIMARY};
+  margin-left: 10%;
+`;
+
+const BlogCardContainer = styled.div`
+  grid-column: 1 / span 5;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const BlogCard = styled.div`
+  background-color: ${Colors.WHITE};
+  height: 240px;
+  width:190px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const ProjectContainer = styled.div`
+  grid-column: 1 / span 5;
+`;
+
+
+const BlogLink = styled(Link)`
+  ${Type.LARGEBODY};
+  color: ${Colors.PRIMARY};
 `;
 
 const IndexPage = ({data}) => (
@@ -97,6 +127,7 @@ const IndexPage = ({data}) => (
       </Header>  
     <ProjectBackground>
       <Container>
+        <ProjectContainer>
               {data.allMarkdownRemark.edges.map(project => (
                 <ProjectCard to ={project.node.frontmatter.path}>
                 <ProjectInfo>
@@ -112,20 +143,43 @@ const IndexPage = ({data}) => (
                   <ProjectTeaserImage>
                    <Img fluid={project.node.frontmatter.small_image.childImageSharp.fluid}/>
                 </ProjectTeaserImage>
-                
               </ProjectCard>   
             ))}
+<<<<<<< HEAD
+            <h3>Blog posts</h3>
+            </ProjectContainer>
+            
+            <BlogCardContainer>
+              <BlogCard>
+                  <ProjectSubtitle>What not to say in facebook interview</ProjectSubtitle>
+                  <BlogLink>Read More</BlogLink>
+                </BlogCard>
+                <BlogCard>
+                  <ProjectSubtitle>What not to say in facebook interview</ProjectSubtitle>
+                  <BlogLink>Read More</BlogLink>
+                </BlogCard>
+                <BlogCard>
+                  <ProjectSubtitle>What not to say in facebook interview</ProjectSubtitle>
+                  <BlogLink>Read More</BlogLink>
+                </BlogCard>
+                <BlogCard>
+                  <ProjectSubtitle>What not to say in facebook interview</ProjectSubtitle>
+                  <BlogLink>Read More</BlogLink>
+                </BlogCard>
+            </BlogCardContainer>
+          </Container>
+=======
       </Container>
+>>>>>>> master
     </ProjectBackground>
-    <Footer>
-    </Footer>
+    <FooterEverything></FooterEverything>
 </Page>
 )
 
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(limit: 10) {
+    allMarkdownRemark(limit: 3) {
       edges {
         node{
           frontmatter {

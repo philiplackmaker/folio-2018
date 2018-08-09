@@ -6,10 +6,13 @@ export const SUBHEADER = `
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+    @media all and (max-width: 980px) {
+        font-size: 2rem;
+        }
 `;
 export const BODY = `
     font-family: 'Sailec-Regular';
-    font-size: 20px;
+    font-size: 1rem;
     text-align: left;
     padding: 0;
     margin: 0;
@@ -25,8 +28,16 @@ margin: 0;
 
 export const NOTES = `
     font-family: 'GT-Super-Book';
-    font-size: 20px;
+    font-size: 1rem;
     text-align: left;
     padding: 0;
     margin: 0;
 `;
+
+export const SMALLHEADER = `
+    font-family: 'Sailec-BOLD';
+    font-size: 1rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+`
