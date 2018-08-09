@@ -17,7 +17,6 @@ const ButtonSmall = styled.button`
     transition: all 0.2s ease-in;
     :visited, :active{
     border: none;
-
     }
     &:hover{
     background-color:${Colors.PRIMARY}

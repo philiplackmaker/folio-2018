@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import styled from "styled-components";
 import Navigation from '../components/navigation';
 import ButtonSmall from '../components/buttonsmall';
@@ -145,7 +145,7 @@ const IndexPage = ({data}) => (
                 </ProjectTeaserImage>
               </ProjectCard>   
             ))}
-<<<<<<< HEAD
+
             <h3>Blog posts</h3>
             </ProjectContainer>
             
@@ -168,9 +168,7 @@ const IndexPage = ({data}) => (
                 </BlogCard>
             </BlogCardContainer>
           </Container>
-=======
-      </Container>
->>>>>>> master
+
     </ProjectBackground>
     <FooterEverything></FooterEverything>
 </Page>
