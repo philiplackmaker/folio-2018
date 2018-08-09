@@ -6,7 +6,7 @@ import  * as Type from '../style/typography';
 import { Link } from "gatsby";
 import * as Colors from '../style/colors';
 
-const FooterEverything  = styled.div`
+const FooterEverythingBox  = styled.div`
 ${Base.GRID}
 padding-top: 3rem;
 `;
@@ -50,8 +50,8 @@ margin: 0;
 margin-bottom: 10px;
 `;
 
-export default () => (
-   <FooterEverything>
+const FooterEverything = () => (
+   <FooterEverythingBox>
        <FooterContainer>
             <FooterProject> 
             <FooterTitles>Project</FooterTitles>
@@ -92,6 +92,7 @@ export default () => (
                 </FooterLinksText>       
             </FooterProject> 
         </FooterContainer>
-    </FooterEverything>
+    </FooterEverythingBox>
    );
    
+   export default FooterEverything
