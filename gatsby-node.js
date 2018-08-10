@@ -2,7 +2,9 @@ const path = require('path');
 
 exports.createPages = ({actions, graphql}) => {
   const {createPage} = actions;
-  const projectTemplate = path.resolve('src/templates/project.js');  
+  const projectTemplate = path.resolve('src/templates/project.js');
+  
+  
 
   return graphql(`
     {
@@ -14,8 +16,7 @@ exports.createPages = ({actions, graphql}) => {
           frontmatter {
             path
             title
-            subtitle
-            
+            subtitle 
           }
         }
       }
@@ -35,3 +36,5 @@ exports.createPages = ({actions, graphql}) => {
 
   })
 }
+
+
