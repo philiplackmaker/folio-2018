@@ -4,7 +4,7 @@ import styled from "styled-components";
 import '../pages/fonts.css';
 import * as Base from '../style/base';
 import '../style/globals';
-// import Img from "gatsby-image";
+import Img from "gatsby-image";
 import { graphql } from 'gatsby';
 import FooterEverything from '../components/footereverything';
 
@@ -19,7 +19,10 @@ export default function Template({data}) {
     <div>
         <Navigation>
           <Container>
-          <h1>{about.frontmatter.title}</h1>
+          <Img fluid={about.frontmatter.cover_image.childImageSharp.fluid}/>
+
+          <h2>{about.frontmatter.title}</h2>
+          <h3>{about.frontmatter.subtitle}</h3>
           </Container>
         </Navigation>
        <FooterEverything></FooterEverything>
@@ -29,14 +32,13 @@ export default function Template({data}) {
 
 
 export const aboutQuery = graphql`
-  query AboutByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path} }) {
+  query AboutByPath($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html 
       frontmatter {
         path
         title
         subtitle
-        templatekey
         cover_image{
           childImageSharp{
             fluid(maxHeight: 600 ) {

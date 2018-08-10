@@ -47,9 +47,10 @@ export default function Template({data}) {
 }
 
 
+
 export const postQuery = graphql`
-  query ProjectByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path} }) {
+  query ProjectByPath($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html 
       frontmatter {
         path
