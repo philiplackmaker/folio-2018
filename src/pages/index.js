@@ -145,10 +145,8 @@ const IndexPage = ({data}) => (
                 </ProjectTeaserImage>
               </ProjectCard>   
             ))}
-
             <h3>Blog posts</h3>
             </ProjectContainer>
-            
             <BlogCardContainer>
               <BlogCard>
                   <ProjectSubtitle>What not to say in facebook interview</ProjectSubtitle>

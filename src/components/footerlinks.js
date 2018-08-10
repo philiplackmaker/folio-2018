@@ -11,6 +11,7 @@ const FooterLinksText = styled(Link)`
     text-decoration: none;
     ${Type.BODY};
     transition: all 0.4s ease-in;
+    color: ${Colors.BLACK};
     :visited, :active{
         color: ${Colors.BLACK};
         text-underline: none;
