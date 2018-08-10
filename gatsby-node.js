@@ -4,7 +4,8 @@ exports.createPages = ({actions, graphql}) => {
   const {createPage} = actions;
   const projectTemplate = path.resolve('src/templates/project.js');  
 
-  return graphql(`{
+  return graphql(`
+    {
     allMarkdownRemark {
       edges {
         node {
