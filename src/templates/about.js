@@ -36,6 +36,7 @@ export const aboutQuery = graphql`
         path
         title
         subtitle
+        templatekey
         cover_image{
           childImageSharp{
             fluid(maxHeight: 600 ) {

@@ -183,6 +183,7 @@ export const pageQuery = graphql`
             path
             subtitle
             note_title
+            templatekey
             small_image{
                 childImageSharp{
                   fluid(maxHeight: 600 ) {
