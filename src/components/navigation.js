@@ -48,10 +48,10 @@ export default () => (
             <NavigationLink to ="/">Home</NavigationLink>
         </ListItems>
         <ListItems>
-        <NavigationLink to ="/">About</NavigationLink>
+        <NavigationLink to ="/about">About</NavigationLink>
         </ListItems>
         <ListItems>
-        <NavigationLink to ="/">Thinking</NavigationLink>
+        <NavigationLink to ="/thinking">Thinking</NavigationLink>
         </ListItems>
         <ListItems>
         <NavigationLink to ="/">Blog</NavigationLink>

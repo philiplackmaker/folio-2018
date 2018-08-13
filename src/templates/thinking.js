@@ -13,13 +13,13 @@ ${Base.GRID};
 `;
 
 export default function Template({data}) {
-  const {markdownRemark: about, } = data;
+  const {markdownRemark: thinking, } = data;
   return (
     <div>
         <Navigation class ="test">
         </Navigation>
           <Container>
-          <h6>{about.frontmatter.title_test}</h6>
+          <h1>{thinking.frontmatter.title_thinking}</h1>
           </Container>
 
        <FooterEverything></FooterEverything>
@@ -28,13 +28,13 @@ export default function Template({data}) {
 }
 
 
-export const aboutQuery = graphql`
-  query AboutByPath($id: String!) {
+export const thinkingQuery = graphql`
+  query thinkingByPath($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html 
       frontmatter {
         path
-        title_test
+        title_thinking
         templateKey
       }
     }

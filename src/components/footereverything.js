@@ -43,7 +43,7 @@ const FooterLinksText = styled(Link)`
     }
 `;
 
-const FooterFooterLinksText = styled.ul`
+const FooterItems = styled.ul`
 list-style-type: none;
 padding: 0;
 margin: 0;
@@ -63,33 +63,33 @@ const FooterEverything = () => (
             </FooterProject> 
             <FooterProject> 
                 <FooterTitles>Site Map</FooterTitles>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Home</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/about">About</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Thinking</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Blog</FooterFooterLinksText>
-                </FooterLinksText>       
+                <FooterItems>
+                    <FooterLinksText to ="/">Home</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/about">About</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/thinking">Thinking</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/">Blog</FooterLinksText>
+                </FooterItems>       
             </FooterProject> 
             <FooterProject> 
                 <FooterTitles>Contact</FooterTitles>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Email</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Twitter</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Linkedin</FooterFooterLinksText>
-                </FooterLinksText>
-                <FooterLinksText>
-                    <FooterFooterLinksText to ="/">Strava</FooterFooterLinksText>
-                </FooterLinksText>       
+                <FooterItems>
+                    <FooterLinksText to ="/">Email</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/">Twitter</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/">Linkedin</FooterLinksText>
+                </FooterItems>
+                <FooterItems>
+                    <FooterLinksText to ="/">Strava</FooterLinksText>
+                </FooterItems>       
             </FooterProject> 
         </FooterContainer>
     </FooterEverythingBox>

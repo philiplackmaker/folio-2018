@@ -34,7 +34,7 @@ const FooterLinks = () => (
     <StaticQuery
     query={graphql`
         query {
-            allMarkdownRemark(limit: 3 ){
+            allMarkdownRemark(limit: 7 ){
                 edges{
                 node{
                     frontmatter{

@@ -30,7 +30,7 @@ const ProjectBackground =styled.div`
   width: 100%;
   background-color: ${Colors.LIGHT_GREY};
   padding: 0;
-  height: 1200px
+  height: 3 000px;
 `;
 
 const ProjectCard = styled(Link)`
@@ -128,7 +128,9 @@ const IndexPage = ({data}) => (
     <ProjectBackground>
       <Container>
         <ProjectContainer>
-              {data.allMarkdownRemark.edges.map(project => (
+              {data.allMarkdownRemark.edges.filter(project => project.node.frontmatter.templateKey === 'project').map(project => (
+                             
+
                 <ProjectCard to ={project.node.frontmatter.path}>
                 <ProjectInfo>
                     <ProjectNotes>{project.node.frontmatter.note_title}</ProjectNotes>
@@ -175,7 +177,7 @@ const IndexPage = ({data}) => (
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(limit: 3) {
+    allMarkdownRemark(limit: 5) {
       edges {
         node{
           frontmatter {
@@ -183,6 +185,7 @@ export const pageQuery = graphql`
             path
             subtitle
             note_title
+            templateKey
             small_image{
                 childImageSharp{
                   fluid(maxHeight: 600 ) {

@@ -3,7 +3,6 @@ const path = require('path')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-
   return graphql(`
     {
     allMarkdownRemark {
@@ -11,7 +10,6 @@ exports.createPages = ({ actions, graphql }) => {
         node {
           html
           id
-
           frontmatter {
             path
             templateKey 
