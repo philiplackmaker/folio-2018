@@ -129,8 +129,6 @@ const IndexPage = ({data}) => (
       <Container>
         <ProjectContainer>
               {data.allMarkdownRemark.edges.filter(project => project.node.frontmatter.templateKey === 'project').map(project => (
-                             
-
                 <ProjectCard to ={project.node.frontmatter.path}>
                 <ProjectInfo>
                     <ProjectNotes>{project.node.frontmatter.note_title}</ProjectNotes>
