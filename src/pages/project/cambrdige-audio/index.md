@@ -35,4 +35,4 @@ We run the survey for about a week and got 175 response with a good mix of ages 
 
 Working with senior members of the Cambridge Audio team we looked to gain a shared understanding of the problem and the users. During the first day we started with an empathy map to get under the skin of the segments. After that we then used the Roman Pincher product vision board and created one for the Evo system. 
 
-![](image_preview.gif)
+<!-- ![](image_preview.gif) -->
