@@ -1,12 +1,7 @@
 ---
-<<<<<<< HEAD
 path: '/cambrdige-audio'
 title: 'Cambridge Audio'
 templateKey: 'project'
-=======
-path: '/cambridge-audio-project'
-title: 'test Audio'
->>>>>>> production
 note_title: '…good example of rapid prototyping to a design stystem...'
 small_image: './CATeaser.jpg'
 subtitle: 'Teaching a hardware company how to make software'
