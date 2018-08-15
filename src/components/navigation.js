@@ -50,7 +50,11 @@ export default () => (
             <NavigationLink to ="/">Home</NavigationLink>
         </ListItems>
         <ListItems>
+<<<<<<< HEAD
         <NavigationLink to ="/about">About</NavigationLink>
+=======
+        <NavigationLink to ="/laterooms">About</NavigationLink>
+>>>>>>> production
         </ListItems>
         <ListItems>
         <NavigationLink to ="/thinking">Thinking</NavigationLink>
