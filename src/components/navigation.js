@@ -6,15 +6,17 @@ import '../style/globals';
 
 const Navigation = styled.div`
     width: 100%;
-    height: 100px;
+    height: 70px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
 `;
 
 const List = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0; 
+
 `;
 
 const ListItems = styled.li`

@@ -31,6 +31,7 @@ injectGlobal `
         color: ${Colors.BLACK};
         font-size: 2rem;
         text-decroation: none;
+        padding-top: 80px;
     }
 
     h6{
@@ -43,11 +44,12 @@ injectGlobal `
     }
     p{
         font-family: 'Sailec-Regular';
-        font-size: 2rem;
+        font-size: 1.75rem;
+       
     }
     a{
         text-decoration: none;
-        color: ${Colors.BLACK};
+        color: ${Colors.PRIMARY};
     }
 
     ol{
@@ -57,5 +59,9 @@ injectGlobal `
         letter-spacing: .05rem;
 
         text-decroation: none;
+    }
+
+    a{
+
     }
 `;

@@ -1,14 +1,15 @@
 const path = require('path')
 
+
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   return graphql(`
     {
-    allMarkdownRemark {
+    allMarkdownRemark(limit: 1000) {
       edges {
         node {
-          html
           id
           frontmatter {
             path
