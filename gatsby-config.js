@@ -1,6 +1,12 @@
   module.exports = {
     plugins: [
       {
+        resolve: 'gatsby-plugin-mixpanel',
+        options: {
+          apiToken: 'd6e013f46ee1a5160a1dc40eaf3f3178', // required
+        },
+      },
+      {
         resolve: 'gatsby-plugin-intercom-spa',
         options: {
           app_id: "d7vu7om5"
