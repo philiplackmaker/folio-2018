@@ -34,7 +34,7 @@ injectGlobal `
 
     th, h4{
         font-family: 'Sailec-BOLD';
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         letter-spacing: .1rem;
         text-align: left;
         margin: 0px;

@@ -23,14 +23,14 @@ ${Base.GRID}
 `;
 
 const Header = styled.div`
-  height: 40vh;
-`;
+  height: 100vh;
+ `;
 
 const ProjectBackground =styled.div`
   width: 100%;
   background-color: ${Colors.LIGHT_GREY};
   padding: 0;
-  height: 3 000px;
+  height: 2000px;
 `;
 
 const ProjectCard = styled(Link)`
@@ -40,7 +40,7 @@ const ProjectCard = styled(Link)`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 100px 0 100px 0;
+  margin: 200px 0 200px 0;
     // &:nth-child(2)
     // {
     //   background-color: red;

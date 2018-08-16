@@ -3,13 +3,16 @@ import { Link } from "gatsby"
 import styled from "styled-components";
 import * as Colors from '../style/colors';
 import '../style/globals';
+import Headroom from "react-headroom";
 
-const Navigation = styled.div`
+
+const NavigationContainer = styled.div`
     width: 100%;
     height: 70px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    background-color: white;
 `;
 
 const List = styled.ul`
@@ -43,8 +46,9 @@ const NavigationLink = styled(Link)`
 `;
 
 
-export default () => (
- <Navigation>
+const Navigation = () => (
+ <Headroom>
+     <NavigationContainer>
     <List>
         <ListItems>
             <NavigationLink to ="/">Home</NavigationLink>
@@ -59,5 +63,8 @@ export default () => (
         <NavigationLink to ="/">Blog</NavigationLink>
         </ListItems>
     </List>
-</Navigation>
+    </NavigationContainer>
+</Headroom>
 );
+
+export default Navigation

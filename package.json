@@ -34,6 +34,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "sharp": "^0.20.5",
     "slate": "^0.31.8",
