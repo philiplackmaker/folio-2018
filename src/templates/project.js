@@ -61,6 +61,8 @@ align-self: flex-end;
 
 `;
 
+
+
 export default function Template({data}) {
   const {markdownRemark: project, } = data;
   return (
@@ -69,7 +71,7 @@ export default function Template({data}) {
         </Navigation>
         <ProjectHeaderContianer>
         <ProjectHeader>
-            <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
+        <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
         </ProjectHeader>
         <ProjectSubHeader>
             <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>

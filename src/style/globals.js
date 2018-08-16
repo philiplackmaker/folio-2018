@@ -20,33 +20,54 @@ injectGlobal `
     }
     h2{
         font-family: 'Sailec-BOLD';
-        color: ${Colors.BLACK};
-        font-size: 3rem;
-        text-transform: uppercase;
-        text-decroation: none;
-
     }
+
     h3{
         font-family: 'Sailec-Regular';
-        color: ${Colors.BLACK};
         font-size: 2rem;
-        text-decroation: none;
-        padding-top: 80px;
-    }
-
-    h6{
-        font-family: 'Sailec-Regular';
-        color: ${Colors.BLACK};
-        font-size: 1rem;
-        text-decroation: none;
-        padding: 0px;
+        letter-spacing: .1rem;
+        text-align: left;
+        padding-bottom: 20px;
+        padding-top: 50px;
         margin: 0px;
     }
-    p{
-        font-family: 'Sailec-Regular';
-        font-size: 1.75rem;
-       
+
+    th, h4{
+        font-family: 'Sailec-BOLD';
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        text-align: left;
+        margin: 0px;
+        text-transform: uppercase;
     }
+    tr, p{
+    font-family: 'Sailec-Regular';
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 50px;
+    line-height: 1.75;
+    letter-spacing: .5px;
+    margin: 0;
+    }
+
+    hr{
+        border: .5px solid ${Colors.MEDIUM_GREY};
+    }
+
+    table td, table th
+    {
+    padding: 0px;
+    }
+
+    th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: left;
+    }
+
+
+   
     a{
         text-decoration: none;
         color: ${Colors.PRIMARY};

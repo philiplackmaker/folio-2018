@@ -5,10 +5,10 @@ export const SUBHEADER = `
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    @media all and (max-width: 980px) {
-        font-size: 2rem;
-        }
+    
 `;
+
+
 export const BODY = `
     font-family: 'Sailec-Regular';
     font-size: 1rem;
@@ -19,7 +19,10 @@ export const BODY = `
 
 export const LARGEBODY = `
 font-family: 'Sailec-Regular';
-font-size: 1.5rem;
+font-size: 1.75rem;
+letter-spacing: .05rem;
+
+
 // text-align: left;
 padding: 0;
 margin: 0;

@@ -117,7 +117,7 @@ const BlogLink = styled(Link)`
   color: ${Colors.PRIMARY};
 `;
 
-mixpanel.track("Video play");
+// mixpanel.track("Video play");
 
 
 const IndexPage = ({data}) => (
