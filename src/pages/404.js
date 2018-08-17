@@ -1,59 +1,28 @@
-import React from 'react'
-import Kitten from 'src/images/Kitten.jpg';
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-
-
-const CatBackground = styled.div`
-background-image: url(${Kitten});
-height: 100vh;
-background-repeat: no-repeat;
-background-position: center; 
-background-size:1000px 750px;
-transition: transform 200ms ease-in-out;
-&:hover {
-  transform: scale(1.6);
-
-}
-`;
 
 const BackGroundGradient = styled.div`
-background-image: linear-gradient(72deg, red, #f06d06);
-
+  background-image: linear-gradient(72deg, red, #f06d06);
 `;
 
-
-const NotFoundPage = () => (
+const NotFoundPage = ({ data }) => (
   <div>
+    <Img fixed={data.file.childImageSharp.fixed} />
     <BackGroundGradient>
-      <CatBackground>
-        <h1>Fuck off</h1>
-      </CatBackground>
+      tes
     </BackGroundGradient>
   </div>
-)
+);
 
-
-export const pageQuery = graphql`
-  query NotFoundPageQuery {
-    allMarkdownRemark(limit: 5) {
-      edges {
-        node{
-          frontmatter {
-            title
-            path
-            subtitle
-            note_title
-            templateKey
-            small_image{
-                childImageSharp{
-                  fluid(maxHeight: 800 ) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-          }
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "src/images/kitten.jpg" }) {
+      childImageSharp{
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
