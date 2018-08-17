@@ -2,7 +2,6 @@ import React from 'react'
 import Kitten from '../images/Kitten.jpg';
 import styled from "styled-components";
 
-
 const CatBackground = styled.div`
 background-image: url(${Kitten});
 height: 100vh;
@@ -25,12 +24,10 @@ background-image: linear-gradient(72deg, red, #f06d06);
 const NotFoundPage = () => (
   <div>
     <BackGroundGradient>
-    <CatBackground>
-    <h1>Fuck off</h1>
-    </CatBackground>
+      <CatBackground>
+        <h1>Fuck off</h1>
+      </CatBackground>
     </BackGroundGradient>
- 
-    
   </div>
 )
 
