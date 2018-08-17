@@ -2,6 +2,9 @@ import { injectGlobal } from 'styled-components';
 import * as Colors from './colors';
 
 
+
+
+
 injectGlobal `
     body{
         margin: 0;
@@ -19,8 +22,16 @@ injectGlobal `
         margin: 0px;
     }
     h2{
-        font-family: 'Sailec-BOLD';
+        font-family: 'Sailec-Regular';
+        font-size: 2.5rem;
+        letter-spacing: .1rem;
+        text-align: left;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        
     }
+    
 
     h3{
         font-family: 'Sailec-Regular';
@@ -34,7 +45,7 @@ injectGlobal `
 
     th, h4{
         font-family: 'Sailec-BOLD';
-        font-size: 1.25rem;
+        font-size: 1.rem;
         letter-spacing: .1rem;
         text-align: left;
         margin: 0px;
@@ -46,7 +57,7 @@ injectGlobal `
     text-align: left;
     padding-bottom: 50px;
     line-height: 1.75;
-    letter-spacing: .5px;
+    letter-spacing: .25px;
     margin: 0;
     }
 
@@ -54,9 +65,10 @@ injectGlobal `
         border: .5px solid ${Colors.MEDIUM_GREY};
     }
 
-    table td, table th
-    {
-    padding: 0px;
+   
+
+    td{
+        padding-right:50px
     }
 
     th {
@@ -77,12 +89,11 @@ injectGlobal `
         font-family: 'Sailec-Regular';
         color: ${Colors.BLACK};
         font-size: 1.5rem;
-        letter-spacing: .05rem;
+        letter-spacing: .25px;
+        line-height: 50px;
 
         text-decroation: none;
     }
 
-    a{
 
-    }
 `;

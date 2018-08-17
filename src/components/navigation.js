@@ -8,7 +8,7 @@ import Headroom from "react-headroom";
 
 const NavigationContainer = styled.div`
     width: 100%;
-    height: 70px;
+    height: 100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -47,8 +47,13 @@ const NavigationLink = styled(Link)`
 
 
 const Navigation = () => (
- <Headroom>
-     <NavigationContainer>
+<Headroom style={{
+                webkitTransition: 'all .5s ease-in-out',
+                mozTransition: 'all .5s ease-in-out',
+                oTransition: 'all .5s ease-in-out',
+                transition: 'all .5s ease-in-out',
+                }}>     
+<NavigationContainer>
     <List>
         <ListItems>
             <NavigationLink to ="/">Home</NavigationLink>

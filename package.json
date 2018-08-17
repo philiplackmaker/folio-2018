@@ -20,6 +20,7 @@
     "gatsby-plugin-styled-components": "^3.0.0-beta.3",
     "gatsby-remark-copy-images": "^0.2.1",
     "gatsby-remark-copy-linked-files": "^2.0.0-beta.3",
+    "gatsby-remark-emoji": "0.0.2",
     "gatsby-remark-emojis": "^0.2.3",
     "gatsby-remark-images": "^2.0.1-beta.10",
     "gatsby-remark-responsive-iframe": "^1.4.20",

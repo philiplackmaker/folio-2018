@@ -9,6 +9,7 @@ import '../style/globals';
 import * as Base from '../style/base';
 import * as Type from '../style/typography';
 import Line from '../images/small_underline.svg';
+import Circle from '../images/circle.svg';
 import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import FooterEverything from '../components/footereverything';
@@ -24,6 +25,16 @@ ${Base.GRID}
 
 const Header = styled.div`
   height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+
+ `;
+
+ const HeaderContents = styled.div`
+ padding: 0;
+ maring: 0;
  `;
 
 const ProjectBackground =styled.div`
@@ -75,7 +86,8 @@ const ProjectNotes = styled(Link)`
 `;
 
 const ProjectTeaserImage = styled.div`
-  width: 260px;
+  width: 300px;
+  height: 400px;
 `;
 
 const UnderLine = styled.span`
@@ -85,10 +97,26 @@ const UnderLine = styled.span`
   background-position: bottom;
 `;
 
-const UnderlineText = styled.div`
+const DrawnCircle = styled.span`
+  z-index: -1;
+  background-image: url(${Circle});
+  padding: 20px;
+  height: 200px;
+  background-repeat: no-repeat, repeat;
+  background-position: bottom;
+`;
+
+
+
+const UnderlineText = styled.text`
   ${Type.NOTES}
   color:${Colors.PRIMARY};
-  margin-left: 10%;
+`;
+
+const DesignerRolesContainer = styled.div`
+Padding-left: 75%;
+Padding-bottom: 20px;
+
 `;
 
 const BlogCardContainer = styled.div`
@@ -99,7 +127,7 @@ const BlogCardContainer = styled.div`
 
 const BlogCard = styled.div`
   background-color: ${Colors.WHITE};
-  height: 240px;
+  height: 500px;
   width:190px;
   padding: 20px;
   display: flex;
@@ -125,8 +153,17 @@ const IndexPage = ({data}) => (
     <Navigation>
     </Navigation>
       <Header>
-          <UnderlineText>*That is me....</UnderlineText>
-          <h1><UnderLine>Philip</UnderLine> is an designer,<br></br> currently at Potato , method, ustwo and Hellocar.</h1>
+        <HeaderContents>
+          <DesignerRolesContainer>
+              <UnderlineText>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </UnderlineText>
+
+          </DesignerRolesContainer>
+       
+     
+          <h1><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Previously he lead design teams at Method, ustwo and Hellocar.</h1>
+        
+        </HeaderContents>
+  
       </Header>  
     <ProjectBackground>
       <Container>
@@ -189,7 +226,7 @@ export const pageQuery = graphql`
             templateKey
             small_image{
                 childImageSharp{
-                  fluid(maxHeight: 600 ) {
+                  fluid(maxHeight: 800 ) {
                     ...GatsbyImageSharpFluid
                   }
                 }

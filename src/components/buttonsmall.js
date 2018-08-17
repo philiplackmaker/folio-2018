@@ -14,13 +14,15 @@ const ButtonSmall = styled.button`
     padding: 16px;
     cursor: pointer;
     display: flex;
-    transition: all 0.2s ease-in;
+    transition: transform 200ms ease-in-out;
     :visited, :active{
     border: none;
     }
-    &:hover{
-    background-color:${Colors.PRIMARY}
-    border: none;
+    &:hover {
+        transform: scale(1.1);
+        border: none;
+
+      }
 }
 `;
 
@@ -38,13 +40,6 @@ const ButtonArrow = styled.span`
     height: 22px;
     background-repeat: no-repeat, repeat;
     background-position: center;
-    &:hover{
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-        animation
-        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-    }
 `;
 
 export default () => (

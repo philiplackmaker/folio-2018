@@ -30,7 +30,7 @@ margin: 0;
 
 export const NOTES = `
     font-family: 'GT-Super-Book';
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: left;
     padding: 0;
     margin: 0;
@@ -42,4 +42,5 @@ export const SMALLHEADER = `
     text-align: left;
     padding: 0;
     margin: 0;
+    
 `
