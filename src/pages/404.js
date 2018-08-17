@@ -1,5 +1,5 @@
 import React from 'react'
-import Kitten from '../images/Kitten.jpg';
+import Kitten from 'src/images/Kitten.jpg';
 import styled from "styled-components";
 import { graphql } from 'gatsby';
 
