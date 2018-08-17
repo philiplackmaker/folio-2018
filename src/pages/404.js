@@ -11,7 +11,7 @@ background-position: center;
 background-size:1000px 750px;
 transition: transform 200ms ease-in-out;
 &:hover {
-  transform: scale(1.1);
+  transform: scale(1.6);
 
 }
 `;
