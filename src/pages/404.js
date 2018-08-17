@@ -1,6 +1,9 @@
 import React from 'react'
 import Kitten from '../images/Kitten.jpg';
 import styled from "styled-components";
+import { graphql } from 'gatsby';
+
+
 
 const CatBackground = styled.div`
 background-image: url(${Kitten});
@@ -30,5 +33,31 @@ const NotFoundPage = () => (
     </BackGroundGradient>
   </div>
 )
+
+
+export const pageQuery = graphql`
+  query NotFoundPageQuery {
+    allMarkdownRemark(limit: 5) {
+      edges {
+        node{
+          frontmatter {
+            title
+            path
+            subtitle
+            note_title
+            templateKey
+            small_image{
+                childImageSharp{
+                  fluid(maxHeight: 800 ) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default NotFoundPage

@@ -27,6 +27,13 @@
         },
       },
       {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          path: `${__dirname}/src/images`,
+          name: 'images',
+        },
+      },
+      {
         resolve: `gatsby-transformer-remark`,
         options: {
           // In your gatsby-transformer-remark plugin array
