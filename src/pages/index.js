@@ -127,7 +127,7 @@ const BlogCardContainer = styled.div`
 
 const BlogCard = styled.div`
   background-color: ${Colors.WHITE};
-  height: 500px;
+  height: 300px;
   width:190px;
   padding: 20px;
   display: flex;

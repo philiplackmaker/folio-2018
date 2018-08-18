@@ -5,6 +5,8 @@ import * as Base from '../style/base';
 import  * as Type from '../style/typography';
 import { Link } from "gatsby";
 import * as Colors from '../style/colors';
+import * as BreakPoints from '../style/breakpoints';
+
 
 const FooterEverythingBox  = styled.div`
 ${Base.GRID}
@@ -12,9 +14,23 @@ padding-top: 3rem;
 `;
 
 const FooterContainer = styled.div`
-grid-column: 1 / span 3;
-display: flex;
-justify-content:space-between;
+    ${BreakPoints.EXTRALARGEDESKTOP} {
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content:space-between;
+    }
+    ${BreakPoints.LARGEDESKTOP} {
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content:space-between;
+    }
+    ${BreakPoints.DESKTOP} {
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content:space-between;
+    }
+
+
 `;
 
 const Blogtext = styled.text`
@@ -73,7 +89,7 @@ const FooterEverything = () => (
                     <FooterLinksText to ="/thinking">Thinking</FooterLinksText>
                 </FooterItems>
                 <FooterItems>
-                    <FooterLinksText to ="/">Blog</FooterLinksText>
+                    <FooterLinksText to ="/blog">Blog</FooterLinksText>
                 </FooterItems>       
             </FooterProject> 
             <FooterProject> 

@@ -2,9 +2,6 @@ import { injectGlobal } from 'styled-components';
 import * as Colors from './colors';
 
 
-
-
-
 injectGlobal `
     body{
         margin: 0;
@@ -24,11 +21,10 @@ injectGlobal `
     h2{
         font-family: 'Sailec-Regular';
         font-size: 2.5rem;
-        letter-spacing: .1rem;
+        letter-spacing: .25px;
         text-align: left;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        text-transform: uppercase;
+        padding-top: 20px;
+        padding-bottom: 10px;
         
     }
     
@@ -36,9 +32,9 @@ injectGlobal `
     h3{
         font-family: 'Sailec-Regular';
         font-size: 2rem;
-        letter-spacing: .1rem;
+        letter-spacing: .25px;
         text-align: left;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         padding-top: 50px;
         margin: 0px;
     }
@@ -51,20 +47,20 @@ injectGlobal `
         margin: 0px;
         text-transform: uppercase;
     }
+
     tr, p{
     font-family: 'Sailec-Regular';
     font-size: 1.5rem;
     text-align: left;
-    padding-bottom: 50px;
     line-height: 1.75;
-    letter-spacing: .25px;
+    letter-spacing: .15px;
     margin: 0;
+    padding-bottom: 20px;n
     }
 
     hr{
         border: .5px solid ${Colors.MEDIUM_GREY};
     }
-
    
 
     td{

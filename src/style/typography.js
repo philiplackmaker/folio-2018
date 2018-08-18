@@ -11,7 +11,7 @@ export const SUBHEADER = `
 
 export const BODY = `
     font-family: 'Sailec-Regular';
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: left;
     padding: 0;
     margin: 0;

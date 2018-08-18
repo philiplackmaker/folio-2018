@@ -65,7 +65,7 @@ const Navigation = () => (
         <NavigationLink to ="/thinking">Thinking</NavigationLink>
         </ListItems>
         <ListItems>
-        <NavigationLink to ="/">Blog</NavigationLink>
+        <NavigationLink to ="/blog">Blog</NavigationLink>
         </ListItems>
     </List>
     </NavigationContainer>

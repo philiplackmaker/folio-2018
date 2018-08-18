@@ -44,7 +44,7 @@ Working with senior members of the Cambridge Audio team we looked to gain a shar
 
 We spent the following day gathering all the assumptions we believed the product is/does/feels/looks like and mapped them on the assumption matrix. We focused on the riskiest and the highest priority assumptions. Using these assumptions we then created hypothesis that we wanted to test. 
 
-![Gif](image_preview.gif)
+<!-- ![Gif](image_preview.gif) -->
 
 <!-- ![Assumption Matrix](cambridge_audio_assumption_matrix.jpg) -->
 
