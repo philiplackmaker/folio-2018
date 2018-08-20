@@ -29,9 +29,17 @@ const FooterContainer = styled.div`
         display: flex;
         justify-content:space-between;
     }
-
-
-`;
+    ${BreakPoints.TABLETS} {
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content:space-between
+    }
+    ${BreakPoints.POTRAITTABLETS} {
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content:space-between
+    }
+    `;
 
 const Blogtext = styled.text`
 ${Type.BODY};
