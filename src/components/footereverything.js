@@ -39,6 +39,7 @@ const FooterContainer = styled.div`
         display: flex;
         justify-content:space-between
     }
+
     `;
 
 const Blogtext = styled.text`
