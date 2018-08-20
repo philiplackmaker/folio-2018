@@ -4,9 +4,9 @@ export const GRID = `
  
                ${BreakPoints.SMALLPHONES} {
                         margin: 0 auto;
-                        max-width: 200px;
+                        max-width: 300px;
                         display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
+                        grid-template-columns: 10px 50px auto 50px 40px;
                         grid-template-rows: 25% 100px auto;
                         }
 
@@ -52,11 +52,11 @@ export const GRID = `
                         }
 
                  ${BreakPoints.EXTRALARGEDESKTOP} {
-                                margin: 0 auto;
-                                max-width: 1400px;
-                                display: grid;
-                                grid-template-columns: 40px 50px auto 50px 40px;
-                                grid-template-rows: 25% 100px auto;
-                                }
+                        margin: 0 auto;
+                        max-width: 1400px;
+                        display: grid;
+                        grid-template-columns: 40px 50px auto 50px 40px;
+                        grid-template-rows: 25% 100px auto;
+                         }
         
 `;
