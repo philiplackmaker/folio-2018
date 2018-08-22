@@ -232,7 +232,7 @@ export const pageQuery = graphql`
             templateKey
             small_image{
                 childImageSharp{
-                  fluid(maxHeight: 1200 ) {
+                  fluid(maxHeight: 700 ) {
                     ...GatsbyImageSharpFluid
                   }
                 }
