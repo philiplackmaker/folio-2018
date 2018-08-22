@@ -2,7 +2,7 @@ import * as BreakPoints from '../style/breakpoints';
 
 
 export const HEADER = `
-    font-family: 'Sailec-Regular';
+    font-family: 'Sailec-BOLD';
     text-align: center;
     ${BreakPoints.SMALL} {
         font-size: 2.5rem;
