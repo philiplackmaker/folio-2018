@@ -242,7 +242,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+` 
 
 export default IndexPage
 
