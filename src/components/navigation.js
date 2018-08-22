@@ -4,31 +4,60 @@ import styled from "styled-components";
 import * as Colors from '../style/colors';
 import '../style/globals';
 import Headroom from "react-headroom";
-
+import * as BreakPoints from '../style/breakpoints';
 
 const NavigationContainer = styled.div`
     width: 100%;
-    height: 100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: white; 
+        ${BreakPoints.SMALL} {
+            height: 70px;
+            }
+        ${BreakPoints.MEDIUM} {  
+            height: 100px;   
+            }
+        ${BreakPoints.LARGE}{ 
+            height: 100px;
+            }
+        ${BreakPoints.XLARGE} { 
+            height: 100px;
+            }
+        ${BreakPoints.XXLARGE} { 
+            height: 100px;
+            }
 `;
 
 const List = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0; 
-
 `;
 
 const ListItems = styled.li`
     font-family: 'Sailec-Regular';
     display: block;
-    font-size: 1.5rem;
-    padding: 14px 16px;
     float: left;
     text-decoration: none;
+        ${BreakPoints.SMALL} {
+            font-size: 1rem;
+            padding: 1rem .5 rem;                                
+        }
+        ${BreakPoints.MEDIUM} {  
+            font-size: 1.5rem;
+            padding: 1rem 1rem;         
+        }
+        ${BreakPoints.LARGE}{ 
+            font-size: 1.5rem;
+            padding: 1rem 1rem;        
+        }
+        ${BreakPoints.XLARGE} { 
+            font-size: 1.5rem;
+            padding: 1rem 1rem;
+        }
+        ${BreakPoints.XXLARGE} { 
+         }
 `;
 
 const NavigationLink = styled(Link)`
@@ -44,7 +73,6 @@ const NavigationLink = styled(Link)`
         text-underline: none;
     }
 `;
-
 
 const Navigation = () => (
 <Headroom style={{

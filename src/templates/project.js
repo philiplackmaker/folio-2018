@@ -4,6 +4,7 @@ import styled from "styled-components";
 import '../pages/fonts.css';
 import '../style/globals';
 import * as Base from '../style/base';
+// import * as BreakPoints from '../style/breakpoints';
 import * as Type from '../style/typography';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -16,38 +17,27 @@ ${Base.GRID};
 `;
 
 const Proeject = styled.div`
-grid-column: 1 / span 5;
+grid-column: 1 / span 12;
 `;
 
 const Content = styled.div`
-grid-column: 1 / span 1;
+grid-column: 1 / span 12;
 `;
 
 const HeroImage = styled.div`
 `;
 
-
-const ProjectHeaderContianer = styled.div`
-${Base.GRID};
-grid-template-rows: 25% 45px auto;
-`;
-
 const ProjectHeader = styled.div`
-grid-column: 1 / span 4;
-display: flex;
-justify-content: center;
-align-items: center;
+// grid-column: col-start 1 / span 11;
+background-color: red;
+// width: 5000px;
+// display: flex;
+// // justify-content: center;
+// // align-items: center;
+// padding: 0;
+// height: 4rem;
 `;
 
-const ProjectSubHeader = styled.div`
-grid-column: 1 / span 4;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-height: 2rem;
-
-`;
 
 const ProjectHeaderText = styled.text`
 ${Type.SUBHEADER};
@@ -58,7 +48,6 @@ align-self: flex-start;
 const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
 align-self: flex-end;
-
 `;
 
 
@@ -69,14 +58,13 @@ export default function Template({data}) {
     <div>
         <Navigation>
         </Navigation>
-        <ProjectHeaderContianer>
+        <Container>
         <ProjectHeader>
         <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
+        <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
+
         </ProjectHeader>
-        <ProjectSubHeader>
-            <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
-        </ProjectSubHeader>
-           </ProjectHeaderContianer>
+           </Container>
         <HeroImage>
             <Img fluid={project.frontmatter.cover_image.childImageSharp.fluid}/>
         </HeroImage>

@@ -1,11 +1,20 @@
 import { injectGlobal } from 'styled-components';
 import * as Colors from './colors';
+import * as BreakPoints from '../style/breakpoints';
+
 
 
 injectGlobal `
+:root{
+    font-size: 100%;
     body{
         margin: 0;
+        font-size: 1rem;
+
     }
+ 
+}
+   
 
     html {
         font-size: 100%;
@@ -23,8 +32,8 @@ injectGlobal `
         font-size: 2.5rem;
         letter-spacing: .25px;
         text-align: left;
-        padding-top: 20px;
-        padding-bottom: 10px;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
         
     }
     
@@ -34,8 +43,8 @@ injectGlobal `
         font-size: 2rem;
         letter-spacing: .25px;
         text-align: left;
-        padding-bottom: 10px;
-        padding-top: 50px;
+        padding-bottom: 1rem;
+        padding-top: 3rem;
         margin: 0px;
     }
 
@@ -50,12 +59,27 @@ injectGlobal `
 
     tr, p{
     font-family: 'Sailec-Regular';
-    font-size: 1.5rem;
     text-align: left;
     line-height: 1.75;
     letter-spacing: .15px;
     margin: 0;
-    padding-bottom: 20px;n
+    padding-bottom: 1rem;
+        ${BreakPoints.SMALL}{
+            font-size: 1rem;
+        }
+        ${BreakPoints.MEDIUM}{
+            font-size: 1.5rem;
+        }
+        ${BreakPoints.LARGE}{
+            font-size: 1.5rem;
+        }
+        ${BreakPoints.XLARGE}{
+            font-size: 1.5rem;
+        }
+        ${BreakPoints.XXLARGE}{
+            font-size: 1.5rem;
+        }
+
     }
 
     hr{
@@ -64,7 +88,7 @@ injectGlobal `
    
 
     td{
-        padding-right:50px
+        padding-right: 1rem;
     }
 
     th {
@@ -87,7 +111,6 @@ injectGlobal `
         font-size: 1.5rem;
         letter-spacing: .25px;
         line-height: 50px;
-
         text-decroation: none;
     }
 
