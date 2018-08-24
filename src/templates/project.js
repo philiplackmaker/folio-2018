@@ -9,6 +9,8 @@ import * as Type from '../style/typography';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import FooterEverything from '../components/footereverything';
+import * as BreakPoints from '../style/breakpoints';
+
 
 
 
@@ -17,9 +19,22 @@ ${Base.GRID};
 `;
 
 const Proeject = styled.div`
-grid-column: 1 / span 12;
+  ${BreakPoints.SMALL} {
+    grid-column: 2 / span 10;
+    }
+  ${BreakPoints.MEDIUM} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.LARGE} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.XLARGE} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.XXLARGE} {
+    grid-column: 1 / span 12;
+    }
 `;
-
 const Content = styled.div`
 grid-column: 1 / span 12;
 `;
@@ -28,26 +43,23 @@ const HeroImage = styled.div`
 `;
 
 const ProjectHeader = styled.div`
-// grid-column: col-start 1 / span 11;
-background-color: red;
-// width: 5000px;
-// display: flex;
-// // justify-content: center;
-// // align-items: center;
-// padding: 0;
-// height: 4rem;
+  grid-column: 1 / span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 8rem;
 `;
 
 
 const ProjectHeaderText = styled.text`
-${Type.SUBHEADER};
-text-align: center;
-align-self: flex-start;
+  ${Type.SUBHEADER};
 `;
 
 const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
-align-self: flex-end;
+padding-top: .5rem;
 `;
 
 

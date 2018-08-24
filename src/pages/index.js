@@ -37,9 +37,11 @@ const Header = styled.div`
  `;
 
  const HeaderText = styled.text `
- ${Type.HEADER};
- text-align: center;
- display: block;
+    ${Type.LARGEHEADER};
+    text-align: center;
+    display: block;
+    padding-left: 3rem;
+    padding-right: 3rem;
  `;
 
  const HeaderContents = styled.div`
@@ -97,9 +99,8 @@ const ProjectCard = styled(Link)`
         }
     ${BreakPoints.XXLARGE} {
       grid-column: 1 / span 12;
-      height: 20rem;
-      margin-bottom: 25rem;
-
+      height: 25rem;
+      margin-bottom: 20rem;
     }   
 `;
 
@@ -204,7 +205,6 @@ const IndexPage = ({data}) => (
                     <div></div>
                     <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
                     <div></div>
-                    
                    <ButtonSmall to ={project.node.frontmatter.path}>
                     </ButtonSmall>
                   </ProjectInfo>

@@ -5,6 +5,7 @@ import * as Colors from '../style/colors';
 import '../style/globals';
 import Headroom from "react-headroom";
 import * as BreakPoints from '../style/breakpoints';
+import * as Type from '../style/typography';
 
 const NavigationContainer = styled.div`
     width: 100%;
@@ -36,24 +37,23 @@ const List = styled.ul`
 `;
 
 const ListItems = styled.li`
-    font-family: 'Sailec-Regular';
     display: block;
     float: left;
     text-decoration: none;
         ${BreakPoints.SMALL} {
-            font-size: 1rem;
+            ${Type.BODY};            
             padding: 1rem .5 rem;                                
         }
         ${BreakPoints.MEDIUM} {  
-            font-size: 1.5rem;
+            ${Type.BODY};
             padding: 1rem 1rem;         
         }
         ${BreakPoints.LARGE}{ 
-            font-size: 1.5rem;
+            ${Type.BODY};
             padding: 1rem 1rem;        
         }
         ${BreakPoints.XLARGE} { 
-            font-size: 1.5rem;
+            ${Type.BODY};
             padding: 1rem 1rem;
         }
         ${BreakPoints.XXLARGE} { 

@@ -21,7 +21,7 @@ ${Base.GRID}
 `;
 
 const Blogtext = styled.text`
-${Type.BODY};
+${Type.SMALLBODY};
 `;
 
 const FooterProject = styled.div`
@@ -104,7 +104,7 @@ margin-bottom: 1rem;
 
 const FooterLinksText = styled(Link)`
     text-decoration: none;
-    ${Type.BODY};
+    ${Type.SMALLBODY};
     transition: all 0.4s ease-in;
     :visited, :active{
         color: ${Colors.BLACK};

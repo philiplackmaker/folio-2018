@@ -1,9 +1,7 @@
 import * as BreakPoints from '../style/breakpoints';
 
-
-export const HEADER = `
+export const LARGEHEADER = `
     font-family: 'Sailec-BOLD';
-    text-align: center;
     ${BreakPoints.SMALL} {
         font-size: 2.5rem;
         line-height: 3rem;                         
@@ -24,40 +22,48 @@ export const HEADER = `
         font-size: 4rem;
         line-height: 5rem; 
     }
-
 `;
 
 export const SUBHEADER = `
     font-family: 'Sailec-BOLD';
     text-transform: uppercase;
     padding: 0;
-    margin: 0;  
+    margin: 0; 
     ${BreakPoints.SMALL} {
         font-size: 1.5rem;
         line-height: 1.5rem;                         
         letter-spacing: .1rem;                       
     }
     ${BreakPoints.MEDIUM} {  
-        font-size: 3rem;
+        font-size: 3.5rem;
         letter-spacing: .1rem; 
-        line-height: 3rem;                         
-     
+        line-height: 3rem;                           
     }
     ${BreakPoints.LARGE}{ 
-        font-size: 3rem;
+        font-size: 3.5rem;
         letter-spacing: .1rem;     
     }
     ${BreakPoints.XLARGE} { 
-        font-size: 3rem;
+        font-size: 3.5rem;
         letter-spacing: .1rem;
     }
     ${BreakPoints.XXLARGE} { 
-        font-size: 3rem;
+        font-size: 3.5rem;
         letter-spacing: .1rem;
     }
 `;
 
-export const BODY = `
+export const SMALLHEADER = `
+        font-family: 'Sailec-BOLD';
+        font-size: 1.rem;
+        letter-spacing: .1rem;
+        text-align: left;
+        margin: 0px;
+        text-transform: uppercase; 
+`;
+
+
+export const SMALLBODY = `
     font-family: 'Sailec-Regular';
     text-align: left;
     padding: 0;
@@ -84,6 +90,33 @@ export const BODY = `
         }
 `;
 
+export const BODY = `
+    font-family: 'Sailec-Regular';
+    text-align: left;
+    padding: 0;
+    margin: 0;
+        ${BreakPoints.SMALL} {
+            font-size: 1rem;
+            line-height: 1.5rem;                         
+        }
+        ${BreakPoints.MEDIUM} {  
+            font-size: 1.5rem;
+            line-height: 1.5rem;      
+        }
+        ${BreakPoints.LARGE}{ 
+            font-size: 1.75rem;
+            line-height: 3rem;    
+        }
+        ${BreakPoints.XLARGE} { 
+            font-size: 1.75rem;
+            line-height: 3rem;  
+        }
+        ${BreakPoints.XXLARGE} { 
+            font-size: 1.75rem;
+            line-height: 3rem;  
+        }
+`;
+
 export const LARGEBODY = `
     font-family: 'Sailec-Regular';
     padding: 0;
@@ -99,18 +132,18 @@ export const LARGEBODY = `
         letter-spacing: .5px;    
     }
     ${BreakPoints.LARGE}{ 
-        font-size: 1.75rem;
-        line-height: 1.5rem;                         
+        font-size: 2.5rem;
+        line-height: 3rem;                         
         letter-spacing: .5px;
     }
     ${BreakPoints.XLARGE} { 
-        font-size: 1.75rem;
-        line-height: 1.5rem;                         
+        font-size: 2.5rem;
+        line-height: 2rem;                         
         letter-spacing: .5px;    
     }
     ${BreakPoints.XXLARGE} { 
-        font-size: 1.75rem;
-        line-height: 1.5rem;                         
+        font-size: 2.5rem;
+        line-height: 3rem;                         
         letter-spacing: .5px;    
     }
 `;
@@ -139,11 +172,4 @@ export const NOTES = `
     }
 `;
 
-export const SMALLHEADER = `
-    font-family: 'Sailec-BOLD';
-    font-size: 1rem;
-    text-align: left;
-    padding: 0;
-    margin: 0;   
-`;
 
