@@ -11,9 +11,6 @@ import Img from 'gatsby-image';
 import FooterEverything from '../components/footereverything';
 import * as BreakPoints from '../style/breakpoints';
 
-
-
-
 const Container = styled.div`
 ${Base.GRID};
 `;
@@ -52,7 +49,6 @@ const ProjectHeader = styled.div`
   height: 8rem;
 `;
 
-
 const ProjectHeaderText = styled.text`
   ${Type.SUBHEADER};
 `;
@@ -61,8 +57,6 @@ const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
 padding-top: .5rem;
 `;
-
-
 
 export default function Template({data}) {
   const {markdownRemark: project, } = data;
@@ -89,8 +83,6 @@ export default function Template({data}) {
     </div>
   )
 }
-
-
 
 export const postQuery = graphql`
   query ProjectByPath($id: String!) {
