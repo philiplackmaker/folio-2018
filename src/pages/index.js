@@ -204,6 +204,7 @@ const IndexPage = ({data}) => (
                     <div></div>
                     <ProjectSubtitle>{project.node.frontmatter.subtitle}</ProjectSubtitle>
                     <div></div>
+                    
                    <ButtonSmall to ={project.node.frontmatter.path}>
                     </ButtonSmall>
                   </ProjectInfo>
