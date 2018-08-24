@@ -39,6 +39,7 @@ const Header = styled.div`
  const HeaderText = styled.text `
  ${Type.HEADER};
  text-align: center;
+ display: block;
  `;
 
  const HeaderContents = styled.div`
