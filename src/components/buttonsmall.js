@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
 import * as Colors from '../style/colors';
-import * as Type from '../style/typography';
 import '../style/globals';
 import Arrow from '../images/arrow.svg';
 import BlueArrow from '../images/blue_arrow.svg';
@@ -44,8 +43,8 @@ const ButtonSmall = styled.button`
             transform: scale(1.1);
             border: none;
         }
-        width: 200px;
-        height: 64px;
+        width: 220px;
+        height: 74px;
         border: none;
         margin-top: 20px;
         padding: 16px;
@@ -56,11 +55,11 @@ const ButtonSmall = styled.button`
             transform: scale(1.1);
             border: none;
         }
-        width: 200px;
-        height: 64px;
+        width: 220px;
+        height: 74px;
         border: none;
         margin-top: 20px;
-        padding: 16px;
+        padding: 8px;
     }
     ${BreakPoints.XXLARGE} { 
         background-color: ${Colors.PRIMARY};
@@ -68,8 +67,8 @@ const ButtonSmall = styled.button`
             transform: scale(1.1);
             border: none;
         }
-        width: 200px;
-        height: 64px;
+        width: 220px;
+        height: 74px;
         border: none;
         margin-top: 20px;
         padding: 16px;
@@ -78,44 +77,74 @@ const ButtonSmall = styled.button`
 
 const ButtonText = styled.text`
     color:${Colors.WHITE}
-    ${Type.BODY}
+    font-family: 'Sailec-Regular';
+    text-align: left;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     ${BreakPoints.SMALL} {
-    color:${Colors.PRIMARY}                      
+    color:${Colors.PRIMARY}  
+    font-size: 1rem;                    
     }
     ${BreakPoints.MEDIUM} {  
-        color:${Colors.WHITE}         
+        color:${Colors.WHITE}   
+        font-size: 1.5rem;      
     }
     ${BreakPoints.LARGE}{ 
-        color:${Colors.WHITE}   
+        color:${Colors.WHITE}  
+        font-size: 1.5rem; 
     }
     ${BreakPoints.XLARGE} { 
         color:${Colors.WHITE}
+        font-size: 1.5rem;
     }
     ${BreakPoints.XXLARGE} { 
         color:${Colors.WHITE}
+           font-size: 1.5rem;
     }
 `;
 
 const ButtonArrow = styled.span`
-    width: 54px;
-    height: 22px;
+    padding-top: 5px;
+    padding-left: 6px;
+    width: 56px;
+    height: 24px;
     background-repeat: no-repeat, repeat;
     background-position: center;
         ${BreakPoints.SMALL} {
-        background-image: url(${BlueArrow});                    
+            background-image: url(${BlueArrow});    
+            padding-top: 0px;
+            padding-left: 0px;
+            width: 56px;
+            height: 18px;                
         }
         ${BreakPoints.MEDIUM} {  
-            background-image: url(${Arrow});         
+            background-image: url(${Arrow});  
+            padding-top: 5px;
+            padding-left: 6px;
+            width: 56px;
+            height: 24px;       
         }
         ${BreakPoints.LARGE}{ 
-            background-image: url(${Arrow});    
+            background-image: url(${Arrow}); 
+            padding-top: 5px;
+            padding-left: 6px;
+            width: 56px;
+            height: 24px;   
         }
         ${BreakPoints.XLARGE} { 
             background-image: url(${Arrow});
+            padding-top: 5px;
+            padding-left: 6px;
+            width: 56px;
+            height: 24px;
         }
         ${BreakPoints.XXLARGE} { 
             background-image: url(${Arrow});
+            padding-top: 5px;
+            padding-left: 6px;
+            width: 56px;
+            height: 24px;
         }
     `;
 

@@ -42,7 +42,7 @@ const ListItems = styled.li`
     text-decoration: none;
         ${BreakPoints.SMALL} {
             ${Type.BODY};            
-            padding: 1rem .5 rem;                                
+            padding: 1rem 1rem;                                
         }
         ${BreakPoints.MEDIUM} {  
             ${Type.BODY};

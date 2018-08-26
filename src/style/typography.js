@@ -55,11 +55,29 @@ export const SUBHEADER = `
 
 export const SMALLHEADER = `
         font-family: 'Sailec-BOLD';
-        font-size: 1.rem;
-        letter-spacing: .1rem;
-        text-align: left;
+        ftext-align: left;
         margin: 0px;
         text-transform: uppercase; 
+        ${BreakPoints.SMALL} {
+            font-size: .75rem;
+            letter-spacing: .5px;                       
+        }
+        ${BreakPoints.MEDIUM} {  
+            font-size: 1rem;
+            letter-spacing: .5px; 
+        }
+        ${BreakPoints.LARGE}{ 
+            font-size: 1.5rem;
+            letter-spacing: .5px;     
+        }
+        ${BreakPoints.XLARGE} { 
+            font-size: 1.5rem;
+            letter-spacing: .1rem;
+        }
+        ${BreakPoints.XXLARGE} { 
+            font-size: 1.5rem;
+            letter-spacing: .1rem;
+        }
 `;
 
 
@@ -97,11 +115,11 @@ export const BODY = `
     margin: 0;
         ${BreakPoints.SMALL} {
             font-size: 1rem;
-            line-height: 1.5rem;                         
+            line-height: 1.75rem;                         
         }
         ${BreakPoints.MEDIUM} {  
             font-size: 1.5rem;
-            line-height: 1.5rem;      
+            line-height: 2.5rem;      
         }
         ${BreakPoints.LARGE}{ 
             font-size: 1.75rem;
@@ -128,7 +146,7 @@ export const LARGEBODY = `
     }
     ${BreakPoints.MEDIUM} {  
         font-size: 1.75rem;
-        line-height: 2rem;                         
+        line-height: 2.5rem;                         
         letter-spacing: .5px;    
     }
     ${BreakPoints.LARGE}{ 
@@ -138,7 +156,7 @@ export const LARGEBODY = `
     }
     ${BreakPoints.XLARGE} { 
         font-size: 2.5rem;
-        line-height: 2rem;                         
+        line-height: 3rem;                         
         letter-spacing: .5px;    
     }
     ${BreakPoints.XXLARGE} { 

@@ -10,7 +10,7 @@ cover_image: './hero_cambridge-audio.png'
 
 | Expertise        | Platforms           | Deliverables  |
 | ------------- |-------------          | -----|            
-| Design, Interaction and Development     | iOS and Android         | UI, UX and Strategy           |
+| Design, Interaction, Lean/Agile & Workshop     | iOS and Android         | UI, UX and Strategy           |
 
 ###The Problem
 

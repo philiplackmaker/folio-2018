@@ -84,17 +84,17 @@ const ProjectCard = styled(Link)`
     }
     ${BreakPoints.MEDIUM} {
       grid-column: 1 / span 12;
-      height: 23rem;
+      height: 25rem;
       margin-top: 15rem;
       }
     ${BreakPoints.LARGE} {
       grid-column: 1 / span 12;
-      height: 20rem;
+      height: 25rem;
       margin-top: 15rem;
       }
     ${BreakPoints.XLARGE} {
         grid-column: 1 / span 12;
-        height: 20rem;
+        height: 25rem;
         margin-bottom: 10rem;
         }
     ${BreakPoints.XXLARGE} {

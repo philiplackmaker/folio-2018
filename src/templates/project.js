@@ -40,13 +40,34 @@ const HeroImage = styled.div`
 `;
 
 const ProjectHeader = styled.div`
-  grid-column: 1 / span 12;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
   height: 8rem;
+      ${BreakPoints.SMALL} {
+        grid-column: 2 / span 10;
+        padding-top: .5rem;                         
+      }
+      ${BreakPoints.MEDIUM} {  
+        grid-column: 1 / span 12;
+        padding-top: 1rem;     
+      }
+      ${BreakPoints.LARGE}{ 
+        grid-column: 1 / span 12;
+        padding-top: 1.5rem;
+      }
+      ${BreakPoints.XLARGE} { 
+        grid-column: 1 / span 12;
+        padding-top: 1rem;
+      }
+      ${BreakPoints.XXLARGE} { 
+        grid-column: 1 / span 12;
+        padding-top: 1rem;
+
+
+  }
 `;
 
 const ProjectHeaderText = styled.text`
@@ -55,6 +76,7 @@ const ProjectHeaderText = styled.text`
 
 const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
+text-align: center;
 padding-top: .5rem;
 `;
 
@@ -66,9 +88,8 @@ export default function Template({data}) {
         </Navigation>
         <Container>
         <ProjectHeader>
-        <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
-        <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
-
+          <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
+          <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
         </ProjectHeader>
            </Container>
         <HeroImage>
