@@ -29,27 +29,32 @@ export const SUBHEADER = `
     text-transform: uppercase;
     padding: 0;
     margin: 0; 
+    text-align: center;
     ${BreakPoints.SMALL} {
         font-size: 1.5rem;
         line-height: 1.5rem;                         
-        letter-spacing: .1rem;                       
+        letter-spacing: .1rem; 
+        line-height: 3rem;                                                 
     }
     ${BreakPoints.MEDIUM} {  
         font-size: 3.5rem;
         letter-spacing: .1rem; 
-        line-height: 3rem;                           
+        line-height: 3.5rem;                           
     }
     ${BreakPoints.LARGE}{ 
         font-size: 3.5rem;
-        letter-spacing: .1rem;     
+        letter-spacing: .1rem;   
+        line-height: 3rem;                           
     }
     ${BreakPoints.XLARGE} { 
         font-size: 3.5rem;
         letter-spacing: .1rem;
+        line-height: 3rem;                           
     }
     ${BreakPoints.XXLARGE} { 
         font-size: 3.5rem;
         letter-spacing: .1rem;
+        line-height: 3rem;                           
     }
 `;
 
@@ -79,6 +84,34 @@ export const SMALLHEADER = `
             letter-spacing: .1rem;
         }
 `;
+
+export const TINYHEADER = `
+        font-family: 'Sailec-BOLD';
+        ftext-align: left;
+        margin: 0px;
+        text-transform: uppercase; 
+        ${BreakPoints.SMALL} {
+            font-size: .75rem;
+            letter-spacing: .5px;                       
+        }
+        ${BreakPoints.MEDIUM} {  
+            font-size: 1rem;
+            letter-spacing: .5px; 
+        }
+        ${BreakPoints.LARGE}{ 
+            font-size: 1rem;
+            letter-spacing: .5px;     
+        }
+        ${BreakPoints.XLARGE} { 
+            font-size: 1rem;
+            letter-spacing: .5px;
+        }
+        ${BreakPoints.XXLARGE} { 
+            font-size: 1rem;
+            letter-spacing: .5px;
+        }
+`;
+
 
 
 export const SMALLBODY = `

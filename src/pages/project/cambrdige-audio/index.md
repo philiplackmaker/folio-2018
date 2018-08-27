@@ -23,7 +23,6 @@ We created a plan that worked with budget and their internal development plan.
 1 week of lean research > the following week was validation sprint with the client after that we moved into a design phase.
 
 ![Workshop](cambridge-audio-process-01.png)
-
 ###Gathering Insights 
 
 Ahead of the validation sprint, we wanted to understand people’s behaviour and needs when is comes to how they consume music within their household. We decided the best way was to gather quantitive research; to do this we run a survey and broadcasted it on our social channels to.  
@@ -40,9 +39,9 @@ We run the survey for about a week and got 175 response with a good mix of ages 
 
 Working with senior members of the Cambridge Audio team we looked to gain a shared understanding of the problem and the users. During the first day we started with an empathy map to get under the skin of the segments. After that we then used the Roman Pincher product vision board and created one for the Evo system. 
 
-![Workshop](cambrdige_audio_workshop.png)
-
 We spent the following day gathering all the assumptions we believed the product is/does/feels/looks like and mapped them on the assumption matrix. We focused on the riskiest and the highest priority assumptions. Using these assumptions we then created hypothesis that we wanted to test. 
+
+![Workshop](cambrdige_audio_workshop.png)
 
 <!-- ![Gif](image_preview.gif) -->
 
@@ -69,7 +68,9 @@ We had morning stand-ups and a weekly review to make sure their was alignment bu
 ###Design decisions
 
 1. The app should be a supporting experience most of the time people will control via their preference music player 
+
 2. Set-up should be timely and get them to the music as soon as possible 
+
 3. Calibration should be simple and quick - reduce steps as much as possible
 
 ###Mapping the product

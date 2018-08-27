@@ -98,7 +98,7 @@ const FooterContact = styled.div`
 `;
 
 const FooterTitles = styled.div`
-${Type.SMALLHEADER};
+${Type.TINYHEADER};
 margin-bottom: 1rem;
 `;
 

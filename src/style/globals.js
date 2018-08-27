@@ -3,6 +3,7 @@ import * as Colors from './colors';
 import * as Type from '../style/typography';
 import * as BreakPoints from '../style/breakpoints';
 
+
 injectGlobal `
 :root{
     font-size: 100%;
@@ -20,8 +21,26 @@ injectGlobal `
     h2{
        ${Type.SUBHEADER};  
        text-algin: center; 
-       padding-top: 4rem;
-       padding-bottom: 3rem;
+       ${BreakPoints.SMALL} {
+            padding-top: 2rem;
+            padding-bottom: .5rem;                      
+            }
+        ${BreakPoints.MEDIUM} {  
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;          
+            }
+        ${BreakPoints.LARGE}{ 
+            padding-top: 4rem;
+            padding-bottom: 1.5rem;      
+            }
+        ${BreakPoints.XLARGE} { 
+            padding-top: 6rem;
+            padding-bottom: 1.5rem;
+            }
+        ${BreakPoints.XXLARGE} { 
+            padding-top: 6rem;
+            padding-bottom: 1.5rem;
+        }
     }
     h3{
         ${Type.LARGEBODY};
@@ -30,44 +49,23 @@ injectGlobal `
             padding-bottom: .5rem;                      
         }
         ${BreakPoints.MEDIUM} {  
-            padding-top: 2rem;
+            padding-top: 3rem;
             padding-bottom: 1.5rem;          
         }
         ${BreakPoints.LARGE}{ 
-            padding-top: 3rem;
+            padding-top: 4rem;
             padding-bottom: 1.5rem;      
         }
         ${BreakPoints.XLARGE} { 
-            padding-top: 4rem;
+            padding-top: 6rem;
             padding-bottom: 1.5rem;
         }
         ${BreakPoints.XXLARGE} { 
-            padding-top: 4rem;
+            padding-top: 6rem;
             padding-bottom: 1..5rem;
         }
     }
-    img{
-        ${BreakPoints.SMALL} {
-            padding-top: 2rem;
-            padding-bottom: .5rem;                      
-        }
-        ${BreakPoints.MEDIUM} {  
-            padding-top: 2rem;
-            padding-bottom: 1.5rem;          
-        }
-        ${BreakPoints.LARGE}{ 
-            padding-top: 3rem;
-            padding-bottom: 3rem;      
-        }
-        ${BreakPoints.XLARGE} { 
-            padding-top: 4rem;
-            padding-bottom: 3rem;
-        }
-        ${BreakPoints.XXLARGE} { 
-            padding-top: 1rem;
-            padding-bottom: 3rem;
-        }
-    }    }
+   
     h4{
         ${Type.SMALLHEADER};
         padding-bottom: 2rem;
@@ -77,26 +75,26 @@ injectGlobal `
         ${Type.SMALLHEADER};
         padding-right: 20px;              
         ${BreakPoints.SMALL} {
-            padding-bottom: .25rem;  
+            padding-bottom: .15rem;  
             padding-right: 20px;              
         }
         ${BreakPoints.MEDIUM} {  
-            padding-bottom: .25rem;
+            padding-bottom: .15rem;
             padding-right: 20px;              
 
         }
         ${BreakPoints.LARGE}{ 
-            padding-bottom: .25rem;
-            padding-right:10rem;              
+            padding-bottom: .15rem;
+            padding-right: 10rem;              
 
         }
         ${BreakPoints.XLARGE} { 
-            padding-bottom: .25rem;
+            padding-bottom: .15rem;
             padding-right:15rem;              
 
         }
         ${BreakPoints.XXLARGE} { 
-            padding-bottom: .5rem;
+            padding-bottom: .15rem;
             padding-right:15rem;              
         }
 
@@ -107,8 +105,7 @@ injectGlobal `
     }
     p{
         ${Type.BODY};
-        // padding-bottom: 2rem;
-
+        padding-bottom: 4rem;; 
     }
     hr{
         border: .5px solid ${Colors.MEDIUM_GREY};
@@ -127,4 +124,5 @@ injectGlobal `
     ol{
      ${Type.BODY};
     }
+
 `;

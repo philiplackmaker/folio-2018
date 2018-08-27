@@ -25,10 +25,8 @@ export default function Template({data}) {
           <Container>
             <Heaader>
             <h1>{thinking.frontmatter.title_thinking}</h1>
-
             </Heaader>
           </Container>
-
        <FooterEverything></FooterEverything>
     </div>
   )

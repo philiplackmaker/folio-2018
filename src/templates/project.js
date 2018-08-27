@@ -45,27 +45,30 @@ const ProjectHeader = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0;
-  height: 8rem;
       ${BreakPoints.SMALL} {
         grid-column: 2 / span 10;
-        padding-top: .5rem;                         
+        padding-top: .5rem; 
+        height: 8rem;                     
       }
       ${BreakPoints.MEDIUM} {  
         grid-column: 1 / span 12;
-        padding-top: 1rem;     
+        padding-top: 1rem;  
+        height: 8rem;   
       }
       ${BreakPoints.LARGE}{ 
         grid-column: 1 / span 12;
         padding-top: 1.5rem;
+        height: 8rem;
       }
       ${BreakPoints.XLARGE} { 
         grid-column: 1 / span 12;
         padding-top: 1rem;
+        height: 8rem;
       }
       ${BreakPoints.XXLARGE} { 
         grid-column: 1 / span 12;
         padding-top: 1rem;
-
+        height: 8rem
 
   }
 `;
@@ -77,7 +80,6 @@ const ProjectHeaderText = styled.text`
 const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
 text-align: center;
-padding-top: .5rem;
 `;
 
 export default function Template({data}) {

@@ -39,6 +39,7 @@ const Header = styled.div`
  const HeaderText = styled.text `
     ${Type.LARGEHEADER};
     text-align: center;
+    color: ${Colors.BLACK};
     display: block;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -111,6 +112,8 @@ const ProjectInfo = styled.div `
 
 const ProjectHeader = styled(Link)`
   ${Type.SUBHEADER};
+  text-align: left;
+  dispaly: block;
   color: ${Colors.BLACK};
     ${BreakPoints.SMALL} {
       padding-top: 1rem;                              
