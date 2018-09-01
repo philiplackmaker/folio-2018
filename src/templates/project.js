@@ -55,22 +55,22 @@ const ProjectHeader = styled.div`
       ${BreakPoints.MEDIUM} {  
         grid-column: 1 / span 12;
         padding-top: ${Spacing.XSMALL};  
-        height: ${Spacing.XLARGE};                     
+        height: ${Spacing.XXLARGE};                     
       }
       ${BreakPoints.LARGE}{ 
         grid-column: 1 / span 12;
         padding-top: ${Spacing.SMALL};  
-        height: ${Spacing.XLARGE};                     
+        height: ${Spacing.XXLARGE};                     
       }
       ${BreakPoints.XLARGE} { 
         grid-column: 1 / span 12;
         padding-top: ${Spacing.SMALL};  
-        height: ${Spacing.XLARGE};                     
+        height: ${Spacing.XXLARGE};                     
       }
       ${BreakPoints.XXLARGE} { 
         grid-column: 1 / span 12;
         padding-top: ${Spacing.SMALL};  
-        height: ${Spacing.XLARGE};                     
+        height: ${Spacing.XXLARGE};                     
   }
 `;
 

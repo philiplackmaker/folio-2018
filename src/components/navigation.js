@@ -11,14 +11,12 @@ import * as Spacing from '../style/spacing';
 import SideDraw from '../components/sideDraw';
 import Slide from 'react-reveal/Slide';
 
-
-
 const NavigationContainer = styled.div`
     width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    background-color: white; 
+    background-color: ${Colors.WHITE}; 
         ${BreakPoints.SMALL} {
             height: ${Spacing.LARGE};
             }

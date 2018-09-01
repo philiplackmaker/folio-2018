@@ -4,6 +4,8 @@ import * as Colors from '../style/colors';
 import { Link } from "gatsby"
 import * as BreakPoints from '../style/breakpoints';
 import * as Type from '../style/typography';
+import Fade from 'react-reveal/Fade';
+
 
 
 const OverlayNavigationLink = styled(Link)`
@@ -56,6 +58,7 @@ const OverlayListItems = styled.li`
 
 const SideDraw = props => (
     <OverlayContainer>
+        <Fade  duration={2000} >
             <OverlayList>
                 <OverlayListItems>
                     <OverlayNavigationLink to ="/">Home</OverlayNavigationLink>
@@ -70,6 +73,7 @@ const SideDraw = props => (
                     <OverlayNavigationLink to ="/blog">Blog</OverlayNavigationLink>
                 </OverlayListItems>
             </OverlayList>
+            </Fade>
     </OverlayContainer>
 );
 
