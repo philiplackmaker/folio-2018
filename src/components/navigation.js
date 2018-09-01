@@ -1,4 +1,5 @@
 import React from 'react'
+import DrawerToggleButton from '../components/drawtoggle';
 import { Link } from "gatsby"
 import styled from "styled-components";
 import * as Colors from '../style/colors';
@@ -7,6 +8,7 @@ import Headroom from "react-headroom";
 import * as BreakPoints from '../style/breakpoints';
 import * as Type from '../style/typography';
 import * as Spacing from '../style/spacing';
+import SideDraw from '../components/sideDraw';
 
 
 const NavigationContainer = styled.div`
@@ -44,11 +46,14 @@ const ListItems = styled.li`
     text-decoration: none;
         ${BreakPoints.SMALL} {
             ${Type.BODY};            
-            padding: 1rem 1rem;                                
+            padding: 1rem 1rem; 
+            display: none;                               
         }
         ${BreakPoints.MEDIUM} {  
             ${Type.BODY};
-            padding: 1rem 1rem;         
+            padding: 1rem 1rem;
+            display: fixed;                               
+         
         }
         ${BreakPoints.LARGE}{ 
             ${Type.BODY};
@@ -76,30 +81,73 @@ const NavigationLink = styled(Link)`
     }
 `;
 
-const Navigation = () => (
-<Headroom style={{
+const DrawerToggleButtonContanier = styled.div`
+${BreakPoints.SMALL} {
+    padding: 1rem;
+    }
+${BreakPoints.MEDIUM} {  
+    display: none
+ }
+`;
+
+
+
+class Navigation extends React.Component {
+    state = {
+        sideDrawOpen: false
+    };
+
+    drawerToggleButtonClickHandler = () =>{
+        this.setState((prevState) => {
+            return{sideDrawOpen: !prevState.sideDrawOpen};
+        });
+    };
+
+    closeToggleClickHandler = () => {
+        this.setState({sideDrawOpen: false});
+    };
+
+
+
+ render (){
+     let sideDraw;
+
+     if (this.state.sideDrawOpen) {
+         sideDraw =  <SideDraw/>
+     }
+
+     return (
+            <Headroom style={{
                 webkitTransition: 'all .5s ease-in-out',
                 mozTransition: 'all .5s ease-in-out',
                 oTransition: 'all .5s ease-in-out',
                 transition: 'all .5s ease-in-out',
-                }}>     
-<NavigationContainer>
-    <List>
-        <ListItems>
-            <NavigationLink to ="/">Home</NavigationLink>
-        </ListItems>
-        <ListItems>
-        <NavigationLink to ="/about">About</NavigationLink>
-        </ListItems>
-        <ListItems>
-        <NavigationLink to ="/thinking">Thinking</NavigationLink>
-        </ListItems>
-        <ListItems>
-        <NavigationLink to ="/blog">Blog</NavigationLink>
-        </ListItems>
-    </List>
+                }}>  
+            {sideDraw}
+           
+            <NavigationContainer>
+            <List>
+                <ListItems>
+                    <NavigationLink to ="/">Home</NavigationLink>
+                </ListItems>
+                <ListItems>
+                <NavigationLink to ="/about">About</NavigationLink>
+                </ListItems>
+                <ListItems>
+                <NavigationLink to ="/thinking">Thinking</NavigationLink>
+                </ListItems>
+                <ListItems>
+                <NavigationLink to ="/blog">Blog</NavigationLink>
+                </ListItems> 
+            </List>
+            <DrawerToggleButtonContanier>
+                <DrawerToggleButton  click={this.drawerToggleButtonClickHandler}  /> 
+            </DrawerToggleButtonContanier>
     </NavigationContainer>
-</Headroom>
-);
+    </Headroom> 
+     );
+ }
+
+}
 
 export default Navigation
