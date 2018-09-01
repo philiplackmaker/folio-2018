@@ -4,7 +4,7 @@ import styled from "styled-components";
 import '../pages/fonts.css';
 import '../style/globals';
 import * as Base from '../style/base';
-// import * as BreakPoints from '../style/breakpoints';
+import * as Spacing from '../style/spacing';
 import * as Type from '../style/typography';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -47,34 +47,34 @@ const ProjectHeader = styled.div`
   padding: 0;
       ${BreakPoints.SMALL} {
         grid-column: 2 / span 10;
-        padding-top: .5rem; 
-        height: 8rem;                     
+        padding-top: ${Spacing.XSMALL};  
+        height: ${Spacing.XLARGE};                     
       }
       ${BreakPoints.MEDIUM} {  
         grid-column: 1 / span 12;
-        padding-top: 1rem;  
-        height: 8rem;   
+        padding-top: ${Spacing.XSMALL};  
+        height: ${Spacing.XLARGE};                     
       }
       ${BreakPoints.LARGE}{ 
         grid-column: 1 / span 12;
-        padding-top: 1.5rem;
-        height: 8rem;
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XLARGE};                     
       }
       ${BreakPoints.XLARGE} { 
         grid-column: 1 / span 12;
-        padding-top: 1rem;
-        height: 8rem;
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XLARGE};                     
       }
       ${BreakPoints.XXLARGE} { 
         grid-column: 1 / span 12;
-        padding-top: 1rem;
-        height: 8rem
-
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XLARGE};                     
   }
 `;
 
 const ProjectHeaderText = styled.text`
   ${Type.SUBHEADER};
+  padding-bottom: ${Spacing.XSMALL};
 `;
 
 const ProjectHeaderSubText = styled.text`

@@ -33,7 +33,6 @@ We run the survey for about a week and got 175 response with a good mix of ages 
 2. The supporting app is important to users. The application gives you the opportunity to be intelligent, delightful but must not be intrusive. 
 3. Customers don’t want to be in a walled garden with their speaker. They have multiple sources and they want to choose how they listen to music.
 
----
 
 ##Building the right thing
 
@@ -57,7 +56,6 @@ The following day we moved into a sketching,  Taking inspiration from the “Goo
 
 Our next focus was to create a prototype to validate with users if our hypothesis are correct or not. (To do create a prototype). As some of our hypothesis could not be tested in the prototype we ran another survey.
 
----
 
 ##Design, ~~build,~~ test
 
@@ -82,7 +80,6 @@ Working closely with the visual designer Taavet Kelle my role in this part was t
 ###Final Product* 
 *This is what we hope it to look like 
 
----
 
 ##Outcomes
 

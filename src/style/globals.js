@@ -2,7 +2,7 @@ import { injectGlobal } from 'styled-components';
 import * as Colors from './colors';
 import * as Type from '../style/typography';
 import * as BreakPoints from '../style/breakpoints';
-
+import * as Spacing from '../style/spacing';
 
 injectGlobal `
 :root{
@@ -12,9 +12,6 @@ injectGlobal `
         font-size: 1rem;
         }
     }
-    html {
-        font-size: 100%;
-    }
     h1{
         ${Type.LARGEHEADER};
     }
@@ -22,54 +19,53 @@ injectGlobal `
        ${Type.SUBHEADER};  
        text-algin: center; 
        ${BreakPoints.SMALL} {
-            padding-top: 2rem;
-            padding-bottom: .5rem;                      
+            padding-top: ${Spacing.LARGE};
+            padding-bottom: ${Spacing.SMALL};                      
             }
         ${BreakPoints.MEDIUM} {  
-            padding-top: 3rem;
-            padding-bottom: 1.5rem;          
+            padding-top: ${Spacing.LARGE};
+            padding-bottom: ${Spacing.SMALL};           
             }
         ${BreakPoints.LARGE}{ 
-            padding-top: 4rem;
-            padding-bottom: 1.5rem;      
+            padding-top: ${Spacing.XLARGE};
+            padding-bottom: ${Spacing.MEDIUM}      
             }
         ${BreakPoints.XLARGE} { 
-            padding-top: 6rem;
-            padding-bottom: 1.5rem;
+            padding-top: ${Spacing.XXLARGE};
+            padding-bottom: ${Spacing.LARGE};
             }
         ${BreakPoints.XXLARGE} { 
-            padding-top: 6rem;
-            padding-bottom: 1.5rem;
+            padding-top: ${Spacing.XXLARGE};
+            padding-bottom: ${Spacing.LARGE};
         }
     }
     h3{
         ${Type.LARGEBODY};
         ${BreakPoints.SMALL} {
-            padding-top: 2rem;
-            padding-bottom: .5rem;                      
-        }
+            padding-top: ${Spacing.LARGE};
+            padding-bottom: ${Spacing.SMALL};                      
+            }
         ${BreakPoints.MEDIUM} {  
-            padding-top: 3rem;
-            padding-bottom: 1.5rem;          
-        }
+            padding-top: ${Spacing.LARGE};
+            padding-bottom: ${Spacing.SMALL};           
+            }
         ${BreakPoints.LARGE}{ 
-            padding-top: 4rem;
-            padding-bottom: 1.5rem;      
-        }
+            padding-top: ${Spacing.XLARGE};
+            padding-bottom: ${Spacing.SMALL}      
+            }
         ${BreakPoints.XLARGE} { 
-            padding-top: 6rem;
-            padding-bottom: 1.5rem;
-        }
+            padding-top: ${Spacing.XXLARGE};
+            padding-bottom: ${Spacing.MEDIUM};
+            }
         ${BreakPoints.XXLARGE} { 
-            padding-top: 6rem;
-            padding-bottom: 1..5rem;
+            padding-top: ${Spacing.XXLARGE};
+            padding-bottom: ${Spacing.MEDIUM};
         }
     }
    
     h4{
         ${Type.SMALLHEADER};
-        padding-bottom: 2rem;
-
+        padding-bottom: ${Spacing.MEDIUM} 
     }
     th{
         ${Type.SMALLHEADER};
@@ -81,36 +77,29 @@ injectGlobal `
         ${BreakPoints.MEDIUM} {  
             padding-bottom: .15rem;
             padding-right: 20px;              
-
         }
         ${BreakPoints.LARGE}{ 
             padding-bottom: .15rem;
             padding-right: 10rem;              
-
         }
         ${BreakPoints.XLARGE} { 
             padding-bottom: .15rem;
             padding-right:15rem;              
-
         }
         ${BreakPoints.XXLARGE} { 
             padding-bottom: .15rem;
             padding-right:15rem;              
         }
-
     }
     tr {
         ${Type.BODY};
-        padding-bottom: 1rem;; 
+        padding-bottom: ${Spacing.SMALL}; 
+       
     }
     p{
         ${Type.BODY};
-        padding-bottom: 4rem;; 
     }
-    hr{
-        border: .5px solid ${Colors.MEDIUM_GREY};
-    }
-
+  
     th {
         display: table-cell;
         vertical-align: inherit;
@@ -124,5 +113,24 @@ injectGlobal `
     ol{
      ${Type.BODY};
     }
+    img{
+        ${BreakPoints.SMALL} {
+           Padding-top: ${Spacing.MEDIUM};                         
+        }
+        ${BreakPoints.MEDIUM} {  
+            Padding-top: ${Spacing.MEDIUM};                         
+          
+        }
+        ${BreakPoints.LARGE}{ 
+            Padding-top: ${Spacing.MEDIUM};                         
+        
+        }
+        ${BreakPoints.XLARGE} { 
+            Padding-top: ${Spacing.MEDIUM};                         
 
+        }
+        ${BreakPoints.XXLARGE} { 
+            Padding-top: ${Spacing.MEDIUM};                         
+        }
+    }
 `;

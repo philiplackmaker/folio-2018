@@ -6,6 +6,8 @@ import '../style/globals';
 import Headroom from "react-headroom";
 import * as BreakPoints from '../style/breakpoints';
 import * as Type from '../style/typography';
+import * as Spacing from '../style/spacing';
+
 
 const NavigationContainer = styled.div`
     width: 100%;
@@ -14,19 +16,19 @@ const NavigationContainer = styled.div`
     align-items: center;
     background-color: white; 
         ${BreakPoints.SMALL} {
-            height: 70px;
+            height: ${Spacing.LARGE};
             }
         ${BreakPoints.MEDIUM} {  
-            height: 100px;   
+            height: ${Spacing.LARGE};
             }
         ${BreakPoints.LARGE}{ 
-            height: 100px;
+            height: ${Spacing.LARGE};
             }
         ${BreakPoints.XLARGE} { 
-            height: 100px;
+            height: ${Spacing.XLARGE};
             }
         ${BreakPoints.XXLARGE} { 
-            height: 100px;
+            height: ${Spacing.XLARGE};
             }
 `;
 

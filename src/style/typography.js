@@ -34,7 +34,6 @@ export const SUBHEADER = `
         font-size: 1.5rem;
         line-height: 1.5rem;                         
         letter-spacing: .1rem; 
-        line-height: 3rem;                                                 
     }
     ${BreakPoints.MEDIUM} {  
         font-size: 3.5rem;

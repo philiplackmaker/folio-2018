@@ -1,7 +1,6 @@
 import * as BreakPoints from '../style/breakpoints';
 
 export const GRID = `
- 
                ${BreakPoints.SMALL} {
                         margin: 0 auto;
                         max-width: 30em;
@@ -32,13 +31,10 @@ export const GRID = `
                         }
                 ${BreakPoints.XXLARGE} { 
                         display: grid;
-                         max-width: 86em;
-                         column-gap: 1rem;
+                        max-width: 86em;
+                        column-gap: 1rem;
                         row-gap: 1rem;
                         grid-template-columns: repeat(12, [col] 4fr );
-                        // grid-template-rows: auto;                   
-                                }
-
-        
+                        }        
 `;
-     
+
