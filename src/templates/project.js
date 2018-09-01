@@ -10,6 +10,8 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import FooterEverything from '../components/footereverything';
 import * as BreakPoints from '../style/breakpoints';
+import Fade from 'react-reveal/Fade';
+
 
 const Container = styled.div`
 ${Base.GRID};
@@ -95,9 +97,12 @@ export default function Template({data}) {
         </ProjectHeader>
            </Container>
         <HeroImage>
+          <Fade  duration={2000}>
             <Img fluid={project.frontmatter.cover_image.childImageSharp.fluid}/>
+            </Fade>
         </HeroImage>
         <Container>
+
           <Proeject>
             <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>

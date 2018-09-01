@@ -9,6 +9,8 @@ import * as BreakPoints from '../style/breakpoints';
 import * as Type from '../style/typography';
 import * as Spacing from '../style/spacing';
 import SideDraw from '../components/sideDraw';
+import Slide from 'react-reveal/Slide';
+
 
 
 const NavigationContainer = styled.div`
@@ -21,10 +23,10 @@ const NavigationContainer = styled.div`
             height: ${Spacing.LARGE};
             }
         ${BreakPoints.MEDIUM} {  
-            height: ${Spacing.LARGE};
+            height: ${Spacing.XLARGE};
             }
         ${BreakPoints.LARGE}{ 
-            height: ${Spacing.LARGE};
+            height: ${Spacing.XLARGE};
             }
         ${BreakPoints.XLARGE} { 
             height: ${Spacing.XLARGE};
@@ -53,7 +55,6 @@ const ListItems = styled.li`
             ${Type.BODY};
             padding: 1rem 1rem;
             display: fixed;                               
-         
         }
         ${BreakPoints.LARGE}{ 
             ${Type.BODY};
@@ -91,7 +92,6 @@ ${BreakPoints.MEDIUM} {
 `;
 
 
-
 class Navigation extends React.Component {
     state = {
         sideDrawOpen: false
@@ -124,7 +124,7 @@ class Navigation extends React.Component {
                 transition: 'all .5s ease-in-out',
                 }}>  
             {sideDraw}
-           
+           <Slide top>
             <NavigationContainer>
             <List>
                 <ListItems>
@@ -144,6 +144,7 @@ class Navigation extends React.Component {
                 <DrawerToggleButton  click={this.drawerToggleButtonClickHandler}  /> 
             </DrawerToggleButtonContanier>
     </NavigationContainer>
+    </Slide>
     </Headroom> 
      );
  }

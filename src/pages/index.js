@@ -14,6 +14,8 @@ import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import FooterEverything from '../components/footereverything';
 import * as BreakPoints from '../style/breakpoints';
+import Fade from 'react-reveal/Fade';
+
 
  
 const Page = styled.div`
@@ -27,7 +29,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   height: 100vh;
-  background-color: ${Colors.LIGHT_GREY};
+  background-color: ${Colors.PRIMARY};
   width: 100%;
   padding-left: 1rem;
   display: flex;
@@ -39,7 +41,7 @@ const Header = styled.div`
  const HeaderText = styled.text `
     ${Type.LARGEHEADER};
     text-align: center;
-    color: ${Colors.BLACK};
+    color: ${Colors.WHITE};
     display: block;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -181,7 +183,6 @@ align-items: end;
       }
 `;
 
-
 const ImageContainer = styled.div`
 grid-column: 8 / span 4
 `;
@@ -195,9 +196,13 @@ const IndexPage = ({data}) => (
           <DesignerRolesContainer>
               {/* <UnderlineText>*<br></br>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </UnderlineText> */}
           </DesignerRolesContainer>
+          <Fade duration={2000}>
           <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Previously he lead design teams at Method, ustwo and Hellocar.</HeaderText>
+
+          </Fade>
         </HeaderContents>
-      </Header>  
+      </Header> 
+      <Fade duration={2000}>
       <Container>
               {data.allMarkdownRemark.edges.filter(project => project.node.frontmatter.templateKey === 'project').map(project => (
                 <ProjectCard to ={project.node.frontmatter.path}>
@@ -219,6 +224,7 @@ const IndexPage = ({data}) => (
               </ProjectCard>   
             ))}
           </Container>
+          </Fade>
     <FooterEverything></FooterEverything>
 </Page>
 )

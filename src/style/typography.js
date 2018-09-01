@@ -120,23 +120,23 @@ export const SMALLBODY = `
     margin: 0;
         ${BreakPoints.SMALL} {
             font-size: 1rem;
-            line-height: 1.5rem;                         
+            line-height: 1.75rem;                         
         }
         ${BreakPoints.MEDIUM} {  
             font-size: 1.25rem;
-            line-height: 1.5rem;      
+            line-height: 1.75rem;                         
         }
         ${BreakPoints.LARGE}{ 
             font-size: 1.25rem;
-            line-height: 1.5rem;     
+            line-height: 1.75rem;                         
         }
         ${BreakPoints.XLARGE} { 
             font-size: 1.25rem;
-            line-height: 1.5rem;  
+            line-height: 1.75rem;                         
         }
         ${BreakPoints.XXLARGE} { 
             font-size: 1.25rem;
-            line-height: 1.5rem;  
+            line-height: 1.75rem;                         
         }
 `;
 
