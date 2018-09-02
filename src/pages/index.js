@@ -15,6 +15,7 @@ import Img from "gatsby-image";
 import FooterEverything from '../components/footereverything';
 import * as BreakPoints from '../style/breakpoints';
 import Fade from 'react-reveal/Fade';
+import * as Spacing from '../style/spacing';
 
 
  
@@ -31,7 +32,6 @@ const Header = styled.div`
   height: 100vh;
   background-color: ${Colors.PRIMARY};
   width: 100%;
-  padding-left: 1rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -40,6 +40,7 @@ const Header = styled.div`
 
  const HeaderText = styled.text `
     ${Type.LARGEHEADER};
+    z-index: 200;
     text-align: center;
     color: ${Colors.WHITE};
     display: block;
@@ -118,19 +119,19 @@ const ProjectHeader = styled(Link)`
   dispaly: block;
   color: ${Colors.BLACK};
     ${BreakPoints.SMALL} {
-      padding-top: 1rem;                              
+      padding-top: ${Spacing.MEDIUM};
     }
     ${BreakPoints.MEDIUM} {  
-      padding-top: 1rem;         
+      padding-top: ${Spacing.MEDIUM};
     }
     ${BreakPoints.LARGE}{ 
-      padding-top: 1rem;       
+      padding-top: ${Spacing.MEDIUM};
     }
     ${BreakPoints.XLARGE} { 
-      padding-top: 2rem;
+      padding-top: ${Spacing.SMALL};
     }
     ${BreakPoints.XXLARGE} { 
-      padding-top: 2.5rem;
+      padding-top: ${Spacing.MEDIUM};
     }
 `;
 
@@ -184,8 +185,26 @@ align-items: end;
 `;
 
 const ImageContainer = styled.div`
-grid-column: 8 / span 4
+  grid-column: 8 / span 4
 `;
+
+const DesignRoles = styled.text`
+  z-index: 0;
+  padding-top: ${Spacing.XSMALL};
+  position: absolute;
+  ${Type.NOTES}
+  color: ${Colors.LIGHTEST_PRIMARY};
+`;
+
+const ThirdPerson = styled.text`
+  z-index: 0;
+  position: absolute;
+  padding-left: 30px;
+  left: 0;
+  ${Type.NOTES}
+  color: ${Colors.LIGHTEST_PRIMARY};
+`;
+
 
 const IndexPage = ({data}) => (
   <Page>
@@ -193,10 +212,11 @@ const IndexPage = ({data}) => (
     </Navigation>
       <Header>
         <HeaderContents>
+        <Fade duration={3000}>
           <DesignerRolesContainer>
-              {/* <UnderlineText>*<br></br>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </UnderlineText> */}
+          <ThirdPerson>*I don't usually talk about myself in third person.</ThirdPerson>
+              <DesignRoles>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </DesignRoles>
           </DesignerRolesContainer>
-          <Fade duration={3000}>
             <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Helping to build software for <UnderLine>brands.</UnderLine><br></br> Philip has lead design teams at Potato, ustwo & Method. <br></br> In London, Bristol & Sydney.  <br></br> Say hello. </HeaderText>
           </Fade>
         </HeaderContents>

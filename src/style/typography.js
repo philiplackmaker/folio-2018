@@ -202,8 +202,6 @@ export const NOTES = `
     font-family: 'GT-Super-Book';
     font-size: 1.5rem;
     text-align: Left;
-    padding: 0;
-    margin: 0;
     ${BreakPoints.SMALL} {
         font-size: 1rem;
     }
