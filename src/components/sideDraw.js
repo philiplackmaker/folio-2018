@@ -54,11 +54,10 @@ const OverlayListItems = styled.li`
        
 `;
 
-
-
 const SideDraw = props => (
-    <OverlayContainer>
-        <Fade  duration={2000} >
+ <Fade duration={1000} >
+  <OverlayContainer>
+        <Fade  left duration={1000} >
             <OverlayList>
                 <OverlayListItems>
                     <OverlayNavigationLink to ="/">Home</OverlayNavigationLink>
@@ -73,8 +72,9 @@ const SideDraw = props => (
                     <OverlayNavigationLink to ="/blog">Blog</OverlayNavigationLink>
                 </OverlayListItems>
             </OverlayList>
-            </Fade>
+        </Fade>
     </OverlayContainer>
+  </Fade>
 );
 
 export default SideDraw;

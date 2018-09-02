@@ -196,13 +196,12 @@ const IndexPage = ({data}) => (
           <DesignerRolesContainer>
               {/* <UnderlineText>*<br></br>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </UnderlineText> */}
           </DesignerRolesContainer>
-          <Fade duration={2000}>
-          <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Previously he lead design teams at Method, ustwo and Hellocar.</HeaderText>
-
+          <Fade duration={3000}>
+            <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Helping to build software for <UnderLine>brands.</UnderLine><br></br> Philip has lead design teams at Potato, ustwo & Method. <br></br> In London, Bristol & Sydney.  <br></br> Say hello. </HeaderText>
           </Fade>
         </HeaderContents>
       </Header> 
-      <Fade duration={2000}>
+      <Fade cascade duration={2000}>
       <Container>
               {data.allMarkdownRemark.edges.filter(project => project.node.frontmatter.templateKey === 'project').map(project => (
                 <ProjectCard to ={project.node.frontmatter.path}>

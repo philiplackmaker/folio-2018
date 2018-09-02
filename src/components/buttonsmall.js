@@ -5,6 +5,7 @@ import '../style/globals';
 import Arrow from '../images/arrow.svg';
 import BlueArrow from '../images/blue_arrow.svg';
 import * as BreakPoints from '../style/breakpoints';
+import * as Type from '../style/typography';
 
 
 const ButtonSmall = styled.button`
@@ -59,7 +60,7 @@ const ButtonSmall = styled.button`
         height: 74px;
         border: none;
         margin-top: 20px;
-        padding: 8px;
+        padding: 16px;
     }
     ${BreakPoints.XXLARGE} { 
         background-color: ${Colors.PRIMARY};
@@ -76,32 +77,11 @@ const ButtonSmall = styled.button`
 `;
 
 const ButtonText = styled.text`
-    color:${Colors.WHITE}
-    font-family: 'Sailec-Regular';
+    color:${Colors.WHITE};
+    ${Type.SMALLBODY};
     text-align: left;
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    ${BreakPoints.SMALL} {
-    color:${Colors.PRIMARY}  
-    font-size: 1rem;                    
-    }
-    ${BreakPoints.MEDIUM} {  
-        color:${Colors.WHITE}   
-        font-size: 1.5rem;      
-    }
-    ${BreakPoints.LARGE}{ 
-        color:${Colors.WHITE}  
-        font-size: 1.5rem; 
-    }
-    ${BreakPoints.XLARGE} { 
-        color:${Colors.WHITE}
-        font-size: 1.5rem;
-    }
-    ${BreakPoints.XXLARGE} { 
-        color:${Colors.WHITE}
-           font-size: 1.5rem;
-    }
 `;
 
 const ButtonArrow = styled.span`

@@ -137,10 +137,10 @@ const FooterEverything = () => (
             <FooterSite> 
                 <FooterTitles>Site Map</FooterTitles>
                 <FooterItems>
-                    <FooterLinksText to ="/">Home</FooterLinksText>
+                    <FooterLinksText to ="/">Work</FooterLinksText>
                 </FooterItems>
                 <FooterItems>
-                    <FooterLinksText to ="/about">About</FooterLinksText>
+                    <FooterLinksText to ="/about">Approach</FooterLinksText>
                 </FooterItems>
                 <FooterItems>
                     <FooterLinksText to ="/thinking">Thinking</FooterLinksText>

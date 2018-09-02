@@ -106,7 +106,6 @@ class Navigation extends React.Component {
     };
 
 
-
  render (){
      let sideDraw;
 
@@ -126,13 +125,13 @@ class Navigation extends React.Component {
             <NavigationContainer>
             <List>
                 <ListItems>
-                    <NavigationLink to ="/">Home</NavigationLink>
+                    <NavigationLink to ="/">Work</NavigationLink>
                 </ListItems>
                 <ListItems>
                 <NavigationLink to ="/about">About</NavigationLink>
                 </ListItems>
                 <ListItems>
-                <NavigationLink to ="/thinking">Thinking</NavigationLink>
+                <NavigationLink to ="/thinking">Approach</NavigationLink>
                 </ListItems>
                 <ListItems>
                 <NavigationLink to ="/blog">Blog</NavigationLink>
