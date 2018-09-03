@@ -222,7 +222,7 @@ const IndexPage = ({data}) => (
           </Fade>
         </HeaderContents>
       </Header> 
-      <Fade cascade duration={2000}>
+      <Fade cascade duration={3000}>
       <Container>
               {data.allMarkdownRemark.edges.filter(project => project.node.frontmatter.templateKey === 'project').map(project => (
                 <ProjectCard to ={project.node.frontmatter.path}>
