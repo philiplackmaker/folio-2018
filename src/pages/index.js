@@ -190,8 +190,9 @@ const ImageContainer = styled.div`
 
 const DesignRoles = styled.text`
   z-index: 0;
-  padding-top: ${Spacing.XSMALL};
   position: absolute;
+  bottom-padding: ${Spacing.LARGE};
+  bottom: 500px;
   ${Type.NOTES}
   color: ${Colors.LIGHTEST_PRIMARY};
 `;
