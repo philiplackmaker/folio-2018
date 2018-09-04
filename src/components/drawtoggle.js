@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 import * as Spacing from '../style/spacing';
-import * as Colors from '../style/colors';
-
+// import * as Colors from '../style/colors';
+import HamburgerMenu from "react-hamburger-menu";
 
 
 
@@ -23,19 +23,56 @@ const ToogleButton = styled.button`
 `;
 
 
-const ToogleButtonLine = styled.div`
-Width: ${Spacing.MEDIUM};
-height: 2px;
-background: ${Colors.BLACK};
-`;
 
 const DrawerToggleButton = props => (
     <ToogleButton onClick={props.click}>
-        <ToogleButtonLine></ToogleButtonLine>
-        <ToogleButtonLine></ToogleButtonLine>
-       <ToogleButtonLine></ToogleButtonLine>
+        <HamburgerMenu
+            width={25}
+            height={18}
+            strokeWidth={2}
+            rotate={0}
+            color='black'
+            borderRadius={0}
+            animationDuration={0.5}
+        />
     </ToogleButton>
 );
 
 export default DrawerToggleButton
 
+
+// class DrawerToggleButton extends React.Component {
+
+//     constructor(props) {
+//         super(props);
+//         this.props=props
+//     }
+
+//     handleClick() {
+//         this.setState({
+//             open: !this.state.open
+//         });
+//     }
+
+//     render (props){
+//         return (
+     
+//     <ToogleButton onClick={props.click}>
+//         <HamburgerMenu
+//             width={25}
+//             height={18}
+//             strokeWidth={2}
+//             rotate={0}
+//             color='black'
+//             borderRadius={0}
+//             animationDuration={0.5}
+//         />
+//     </ToogleButton>
+//  );
+        
+
+//     }
+
+// }
+
+// export default DrawerToggleButton
