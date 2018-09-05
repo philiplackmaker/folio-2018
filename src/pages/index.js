@@ -218,7 +218,7 @@ const IndexPage = ({data}) => (
           <ThirdPerson>*I don't usually talk about myself in third person.</ThirdPerson>
               <DesignRoles>Product designer,<br></br> Visual designer,<br></br> user exerperience designer <br></br>& Graphic Designer. </DesignRoles>
           </DesignerRolesContainer>
-            <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Helping to build software for <UnderLine>brands.</UnderLine><br></br> Philip has lead design teams at Potato, ustwo & Method. <br></br> In London, Bristol & Sydney.  <br></br> Say hello. </HeaderText>
+            <HeaderText><UnderLine>Philip*</UnderLine> is a<DrawnCircle>designer</DrawnCircle><br></br>Helping to build software for <UnderLine>brands.</UnderLine><br></br> Philip is leading design at Potato. Previously ustwo & Method. <br></br> In London, Bristol & Sydney.  <br></br> Say hello. </HeaderText>
           </Fade>
         </HeaderContents>
       </Header> 

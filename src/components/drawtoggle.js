@@ -24,21 +24,21 @@ const ToogleButton = styled.button`
 
 
 
-    const DrawerToggleButton = props => (
+const DrawerToggleButton = props => (
         <ToogleButton onClick={props.click}>
             <HamburgerMenu
                 width={25}
                 height={18}
                 strokeWidth={2}
                 rotate={0}
-                color='black'
+                color='red'
                 borderRadius={0}
                 animationDuration={0.5}
             />
         </ToogleButton>
     );
 
-    export default DrawerToggleButton
+export default DrawerToggleButton
 
 
 // class DrawerToggleButton extends React.Component {
