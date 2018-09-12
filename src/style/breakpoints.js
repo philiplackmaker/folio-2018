@@ -1,21 +1,27 @@
-export const SMALL = `
-@media screen and (min-width: 20rem)
+export const SMALLPHONES = `
+@media (min-width:320px)
 `;
 
-export const MEDIUM = `
-@media screen and (min-width: 48rem)	
+export const LARGEPHONES = `
+@media (min-width:480px)
 `;
 
-export const LARGE = `
-@media screen and (min-width: 64rem)`;
-
-export const XLARGE = `
-@media screen and (min-width: 80rem)
+export const POTRAITTABLETS = `
+@media (min-width:600px)
 `;
 
-export const XXLARGE = `
-@media (min-width: 94rem)
-
+export const TABLETS = `
+@media (min-width:801px)
 `;
 
+export const DESKTOP =`
+@media (min-width:1025px)
+`;
 
+export const LARGEDESKTOP = `
+@media (min-width:1281px)
+`;
+
+export const EXTRALARGEDESKTOP = `
+@media (min-width:1400px)
+`;

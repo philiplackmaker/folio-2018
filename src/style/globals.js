@@ -1,136 +1,95 @@
 import { injectGlobal } from 'styled-components';
 import * as Colors from './colors';
-import * as Type from '../style/typography';
-import * as BreakPoints from '../style/breakpoints';
-import * as Spacing from '../style/spacing';
+
 
 injectGlobal `
-:root{
-    font-size: 100%;
     body{
         margin: 0;
-        font-size: 1rem;
-        }
+    }
+
+    html {
+        font-size: 100%;
     }
     h1{
-        ${Type.LARGEHEADER};
+        font-family: 'Sailec-Regular';
+        font-size:4rem;
+        letter-spacing: .1rem;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
     }
     h2{
-       ${Type.SUBHEADER};  
-       text-algin: center; 
-       ${BreakPoints.SMALL} {
-            padding-top: ${Spacing.LARGE};
-            padding-bottom: ${Spacing.SMALL};                      
-            }
-        ${BreakPoints.MEDIUM} {  
-            padding-top: ${Spacing.LARGE};
-            padding-bottom: ${Spacing.SMALL};           
-            }
-        ${BreakPoints.LARGE}{ 
-            padding-top: ${Spacing.XLARGE};
-            padding-bottom: ${Spacing.MEDIUM}      
-            }
-        ${BreakPoints.XLARGE} { 
-            padding-top: ${Spacing.XXLARGE};
-            padding-bottom: ${Spacing.LARGE};
-            }
-        ${BreakPoints.XXLARGE} { 
-            padding-top: ${Spacing.XXLARGE};
-            padding-bottom: ${Spacing.LARGE};
-        }
+        font-family: 'Sailec-Regular';
+        font-size: 2.5rem;
+        letter-spacing: .25px;
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        
     }
+    
+
     h3{
-        ${Type.LARGEBODY};
-        ${BreakPoints.SMALL} {
-            padding-top: ${Spacing.LARGE};
-            padding-bottom: ${Spacing.SMALL};                      
-            }
-        ${BreakPoints.MEDIUM} {  
-            padding-top: ${Spacing.LARGE};
-            padding-bottom: ${Spacing.SMALL};           
-            }
-        ${BreakPoints.LARGE}{ 
-            padding-top: ${Spacing.XLARGE};
-            padding-bottom: ${Spacing.SMALL}      
-            }
-        ${BreakPoints.XLARGE} { 
-            padding-top: ${Spacing.XXLARGE};
-            padding-bottom: ${Spacing.MEDIUM};
-            }
-        ${BreakPoints.XXLARGE} { 
-            padding-top: ${Spacing.XXLARGE};
-            padding-bottom: ${Spacing.MEDIUM};
-        }
+        font-family: 'Sailec-Regular';
+        font-size: 2rem;
+        letter-spacing: .25px;
+        text-align: left;
+        padding-bottom: 10px;
+        padding-top: 50px;
+        margin: 0px;
+    }
+
+    th, h4{
+        font-family: 'Sailec-BOLD';
+        font-size: 1.rem;
+        letter-spacing: .1rem;
+        text-align: left;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+
+    tr, p{
+    font-family: 'Sailec-Regular';
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 1.75;
+    letter-spacing: .15px;
+    margin: 0;
+    padding-bottom: 20px;n
+    }
+
+    hr{
+        border: .5px solid ${Colors.MEDIUM_GREY};
     }
    
-    h4{
-        ${Type.SMALLHEADER};
-        padding-bottom: ${Spacing.MEDIUM} 
+
+    td{
+        padding-right:50px
     }
-    th{
-        ${Type.SMALLHEADER};
-        padding-right: 20px;              
-        ${BreakPoints.SMALL} {
-            padding-bottom: .15rem;  
-            padding-right: 20px;              
-        }
-        ${BreakPoints.MEDIUM} {  
-            padding-bottom: .15rem;
-            padding-right: 20px;              
-        }
-        ${BreakPoints.LARGE}{ 
-            padding-bottom: .15rem;
-            padding-right: 10rem;              
-        }
-        ${BreakPoints.XLARGE} { 
-            padding-bottom: .15rem;
-            padding-right:15rem;              
-        }
-        ${BreakPoints.XXLARGE} { 
-            padding-bottom: .15rem;
-            padding-right:15rem;              
-        }
-    }
-    tr {
-        ${Type.BODY};
-        padding-bottom: ${Spacing.SMALL}; 
-       
-    }
-    p{
-        ${Type.BODY};
-    }
-  
+
     th {
         display: table-cell;
         vertical-align: inherit;
         font-weight: bold;
         text-align: left;
     }
-     a{
+
+
+   
+    a{
         text-decoration: none;
         color: ${Colors.PRIMARY};
     }
-    ol{
-     ${Type.BODY};
-    }
-    img{
-        ${BreakPoints.SMALL} {
-           Padding-top: ${Spacing.MEDIUM};                         
-        }
-        ${BreakPoints.MEDIUM} {  
-            Padding-top: ${Spacing.MEDIUM};                         
-          
-        }
-        ${BreakPoints.LARGE}{ 
-            Padding-top: ${Spacing.MEDIUM};                         
-        
-        }
-        ${BreakPoints.XLARGE} { 
-            Padding-top: ${Spacing.MEDIUM};                         
 
-        }
-        ${BreakPoints.XXLARGE} { 
-            Padding-top: ${Spacing.MEDIUM};                         
-        }
+    ol{
+        font-family: 'Sailec-Regular';
+        color: ${Colors.BLACK};
+        font-size: 1.5rem;
+        letter-spacing: .25px;
+        line-height: 50px;
+
+        text-decroation: none;
     }
+
+
 `;
