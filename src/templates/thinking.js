@@ -12,6 +12,10 @@ const Container = styled.div`
 ${Base.GRID};
 `;
 
+const Heaader = styled.div`
+grid-column: 2 / span 6;
+`;
+
 export default function Template({data}) {
   const {markdownRemark: thinking, } = data;
   return (
@@ -19,9 +23,10 @@ export default function Template({data}) {
         <Navigation class ="test">
         </Navigation>
           <Container>
-          <h1>{thinking.frontmatter.title_thinking}</h1>
+            <Heaader>
+            <h1>{thinking.frontmatter.title_thinking}</h1>
+            </Heaader>
           </Container>
-
        <FooterEverything></FooterEverything>
     </div>
   )

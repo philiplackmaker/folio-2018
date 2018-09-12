@@ -4,11 +4,13 @@ import styled from "styled-components";
 import '../pages/fonts.css';
 import '../style/globals';
 import * as Base from '../style/base';
+import * as Spacing from '../style/spacing';
 import * as Type from '../style/typography';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import FooterEverything from '../components/footereverything';
-
+import * as BreakPoints from '../style/breakpoints';
+import Fade from 'react-reveal/Fade';
 
 
 const Container = styled.div`
@@ -16,52 +18,71 @@ ${Base.GRID};
 `;
 
 const Proeject = styled.div`
-grid-column: 1 / span 5;
+  ${BreakPoints.SMALL} {
+    grid-column: 2 / span 10;
+    }
+  ${BreakPoints.MEDIUM} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.LARGE} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.XLARGE} {
+    grid-column: 1 / span 12;
+    }
+  ${BreakPoints.XXLARGE} {
+    grid-column: 1 / span 12;
+    }
 `;
-
 const Content = styled.div`
-grid-column: 1 / span 1;
+grid-column: 1 / span 12;
 `;
 
 const HeroImage = styled.div`
 `;
 
-
-const ProjectHeaderContianer = styled.div`
-${Base.GRID};
-grid-template-rows: 25% 45px auto;
-`;
-
 const ProjectHeader = styled.div`
-grid-column: 1 / span 4;
-display: flex;
-justify-content: center;
-align-items: center;
-`;
-
-const ProjectSubHeader = styled.div`
-grid-column: 1 / span 4;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-height: 2rem;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+      ${BreakPoints.SMALL} {
+        grid-column: 2 / span 10;
+        padding-top: ${Spacing.XSMALL};  
+        height: ${Spacing.XLARGE};                     
+      }
+      ${BreakPoints.MEDIUM} {  
+        grid-column: 1 / span 12;
+        padding-top: ${Spacing.XSMALL};  
+        height: ${Spacing.XXLARGE};                     
+      }
+      ${BreakPoints.LARGE}{ 
+        grid-column: 1 / span 12;
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XXLARGE};                     
+      }
+      ${BreakPoints.XLARGE} { 
+        grid-column: 1 / span 12;
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XXLARGE};                     
+      }
+      ${BreakPoints.XXLARGE} { 
+        grid-column: 1 / span 12;
+        padding-top: ${Spacing.SMALL};  
+        height: ${Spacing.XXLARGE};                     
+  }
 `;
 
 const ProjectHeaderText = styled.text`
-${Type.SUBHEADER};
-text-align: center;
-align-self: flex-start;
+  ${Type.SUBHEADER};
+  padding-bottom: ${Spacing.XSMALL};
 `;
 
 const ProjectHeaderSubText = styled.text`
 ${Type.LARGEBODY};
-align-self: flex-end;
-
+text-align: center;
 `;
-
-
 
 export default function Template({data}) {
   const {markdownRemark: project, } = data;
@@ -69,18 +90,19 @@ export default function Template({data}) {
     <div>
         <Navigation>
         </Navigation>
-        <ProjectHeaderContianer>
+        <Container>
         <ProjectHeader>
-        <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
+          <ProjectHeaderText>{project.frontmatter.title}</ProjectHeaderText>
+          <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
         </ProjectHeader>
-        <ProjectSubHeader>
-            <ProjectHeaderSubText>{project.frontmatter.subtitle}</ProjectHeaderSubText>
-        </ProjectSubHeader>
-           </ProjectHeaderContianer>
+           </Container>
         <HeroImage>
+          <Fade  duration={2000}>
             <Img fluid={project.frontmatter.cover_image.childImageSharp.fluid}/>
+            </Fade>
         </HeroImage>
         <Container>
+
           <Proeject>
             <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
           </Proeject>
@@ -89,8 +111,6 @@ export default function Template({data}) {
     </div>
   )
 }
-
-
 
 export const postQuery = graphql`
   query ProjectByPath($id: String!) {

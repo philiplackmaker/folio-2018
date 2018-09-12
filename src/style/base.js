@@ -1,62 +1,40 @@
 import * as BreakPoints from '../style/breakpoints';
 
 export const GRID = `
- 
-               ${BreakPoints.SMALLPHONES} {
+               ${BreakPoints.SMALL} {
                         margin: 0 auto;
-                        max-width: 300px;
+                        max-width: 30em;
                         display: grid;
-                        grid-template-columns: 10px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
+                        grid-template-columns: repeat(12, [col] 4fr );
+                        grid-gap: 1rem;                      
                         }
-
-                ${BreakPoints.LARGEPHONES} {  
+                ${BreakPoints.MEDIUM} {  
                         margin: 0 auto;
-                        max-width: 400px;
+                        max-width: 42em;
                         display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
+                        grid-template-columns: repeat(12, [col] 4fr );
+                        grid-gap: 1rem;                      
                         }
-
-                ${BreakPoints.POTRAITTABLETS}{ 
+                ${BreakPoints.LARGE}{ 
                         margin: 0 auto;
-                        max-width: 500px;
+                        max-width: 64em;
                         display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
-
+                        grid-template-columns: repeat(12, [col] 4fr );
+                        grid-gap: 1rem;                      
                          }
-
-                ${BreakPoints.TABLETS} { 
-                        margin: 0 auto;
-                        max-width: 500px;
+                ${BreakPoints.XLARGE} { 
                         display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
+                        max-width: 72em;
+                        column-gap: 1rem;
+                        row-gap: 1rem;
+                        grid-template-columns: repeat(12, [col] 4fr );
                         }
-
-                ${BreakPoints.DESKTOP} {
-                        margin: 0 auto;
-                        max-width: 900px;
+                ${BreakPoints.XXLARGE} { 
                         display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
-                        }
-                        
-                ${BreakPoints.LARGEDESKTOP} {
-                        margin: 0 auto;
-                        max-width: 1200px;
-                        display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
-                        }
-
-                 ${BreakPoints.EXTRALARGEDESKTOP} {
-                        margin: 0 auto;
-                        max-width: 1400px;
-                        display: grid;
-                        grid-template-columns: 40px 50px auto 50px 40px;
-                        grid-template-rows: 25% 100px auto;
-                         }
-        
+                        max-width: 86em;
+                        column-gap: 1rem;
+                        row-gap: 1rem;
+                        grid-template-columns: repeat(12, [col] 4fr );
+                        }        
 `;
+

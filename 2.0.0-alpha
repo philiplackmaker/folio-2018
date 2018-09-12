@@ -1,0 +1,10 @@
+
+> fsevents@1.2.4 install /Users/philip/development/portfolio-2018/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/philip/development/portfolio-2018/node_modules/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
++ gatsby@2.0.0-rc.19
+added 1360 packages from 824 contributors, updated 95 packages and audited 14147 packages in 56.82s
+found 0 vulnerabilities
+
