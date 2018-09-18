@@ -12,7 +12,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,12 +20,12 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         // In your gatsby-transformer-remark plugin array
         plugins: [
-
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -36,7 +35,6 @@ module.exports = {
           `gatsby-remark-emoji`,
           'gatsby-remark-static-images',
           'gatsby-remark-copy-linked-files',
-
         ],
       },
     },
